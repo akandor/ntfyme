@@ -1,0 +1,611 @@
+import SwiftUI
+import AppKit
+
+struct SettingsView: View {
+    var body: some View {
+        TabView {
+            GeneralSettingsView()
+                .tabItem { Label("General", systemImage: "gearshape") }
+            SubscriptionsSettingsView()
+                .tabItem { Label("Subscriptions", systemImage: "bell") }
+            AboutSettingsView()
+                .tabItem { Label("About", systemImage: "info.circle") }
+        }
+        .frame(width: 540, height: 460)
+    }
+}
+
+// MARK: - General
+
+struct GeneralSettingsView: View {
+    @EnvironmentObject var store: Store
+    @State private var serverDraft: String = ""
+    @State private var showLanguageRestartAlert = false
+    @State private var languageAtAppear: String = "system"
+
+    var body: some View {
+        Form {
+            Section {
+                TextField("Default server", text: $serverDraft, prompt: Text("https://ntfy.sh"))
+                    .textFieldStyle(.roundedBorder)
+                    .onSubmit(commit)
+                HStack {
+                    Spacer()
+                    Button("Apply") { commit() }
+                        .disabled(normalizedDraft == store.defaultServer || normalizedDraft.isEmpty)
+                }
+            } header: {
+                Text("Default server")
+            } footer: {
+                Text("Used for any subscription that doesn't override the server. Include scheme (https://).")
+                    .font(.caption)
+                    .foregroundStyle(.secondary)
+            }
+
+            Section {
+                Toggle("Launch at login", isOn: Binding(
+                    get: { store.launchAtLogin },
+                    set: { store.setLaunchAtLogin($0) }
+                ))
+            } header: {
+                Text("Startup")
+            } footer: {
+                Text("Open ntfyme automatically when you log in to your Mac.")
+                    .font(.caption)
+                    .foregroundStyle(.secondary)
+            }
+
+            Section {
+                Picker("Language", selection: $store.language) {
+                    ForEach(Store.availableLanguages, id: \.code) { lang in
+                        if lang.code == "system" {
+                            Text("System default").tag(lang.code)
+                        } else {
+                            Text(verbatim: lang.displayName).tag(lang.code)
+                        }
+                    }
+                }
+            } header: {
+                Text("Language")
+            } footer: {
+                Text("Restart ntfyme to apply a new language.")
+                    .font(.caption)
+                    .foregroundStyle(.secondary)
+            }
+
+            Section {
+                Toggle("Play sound for new notifications", isOn: $store.soundEnabled)
+
+                HStack {
+                    Picker("Sound", selection: $store.soundName) {
+                        ForEach(Store.availableSounds, id: \.self) { name in
+                            if name == "default" {
+                                Text("System default").tag(name)
+                            } else {
+                                Text(verbatim: name).tag(name)
+                            }
+                        }
+                    }
+                    .disabled(!store.soundEnabled)
+
+                    Button {
+                        NotificationService.shared.previewSound(named: store.soundName)
+                    } label: {
+                        Image(systemName: "play.circle")
+                    }
+                    .buttonStyle(.borderless)
+                    .disabled(!store.soundEnabled || store.soundName == "default")
+                    .help("Preview")
+                }
+            } header: {
+                Text("Sound")
+            } footer: {
+                Text("\"System default\" follows the macOS notification sound and respects Do Not Disturb. Named sounds play directly and will be heard even while a Focus mode is active.")
+                    .font(.caption)
+                    .foregroundStyle(.secondary)
+            }
+        }
+        .formStyle(.grouped)
+        .padding()
+        .onAppear {
+            serverDraft = store.defaultServer
+            languageAtAppear = store.language
+        }
+        .onChange(of: store.language) { _, newValue in
+            if newValue != languageAtAppear {
+                showLanguageRestartAlert = true
+            }
+        }
+        .alert("Language change", isPresented: $showLanguageRestartAlert) {
+            Button("Restart Now") { Self.relaunch() }
+            Button("Later", role: .cancel) { languageAtAppear = store.language }
+        } message: {
+            Text("ntfyme needs to restart to switch languages.")
+        }
+    }
+
+    private static func relaunch() {
+        let url = Bundle.main.bundleURL
+        let config = NSWorkspace.OpenConfiguration()
+        config.createsNewApplicationInstance = true
+        NSWorkspace.shared.openApplication(at: url, configuration: config) { _, _ in
+            DispatchQueue.main.async { NSApp.terminate(nil) }
+        }
+    }
+
+    private var normalizedDraft: String {
+        serverDraft.trimmingCharacters(in: .whitespacesAndNewlines)
+    }
+
+    private func commit() {
+        let value = normalizedDraft
+        guard !value.isEmpty, URL(string: value) != nil else { return }
+        store.defaultServer = value
+    }
+}
+
+// MARK: - Subscriptions
+
+struct SubscriptionsSettingsView: View {
+    @EnvironmentObject var store: Store
+    @State private var selection: UUID?
+    @State private var editing: Subscription?
+    @State private var showingAdd = false
+
+    var body: some View {
+        VStack(spacing: 0) {
+            List(selection: $selection) {
+                ForEach(store.subscriptions) { sub in
+                    SubscriptionRow(sub: sub, defaultServer: store.defaultServer)
+                        .tag(sub.id)
+                        .contextMenu {
+                            Button("Edit…") { editing = sub }
+                            Button("Remove", role: .destructive) { store.removeSubscription(sub) }
+                        }
+                }
+            }
+            .listStyle(.inset(alternatesRowBackgrounds: true))
+
+            Divider()
+
+            HStack {
+                Button {
+                    showingAdd = true
+                } label: {
+                    Image(systemName: "plus")
+                }
+                .help("Subscribe to a topic")
+
+                Button {
+                    guard let id = selection,
+                          let sub = store.subscriptions.first(where: { $0.id == id }) else { return }
+                    store.removeSubscription(sub)
+                    selection = nil
+                } label: {
+                    Image(systemName: "minus")
+                }
+                .disabled(selection == nil)
+                .help("Unsubscribe")
+
+                Button {
+                    guard let id = selection,
+                          let sub = store.subscriptions.first(where: { $0.id == id }) else { return }
+                    editing = sub
+                } label: {
+                    Image(systemName: "pencil")
+                }
+                .disabled(selection == nil)
+                .help("Edit")
+
+                Spacer()
+            }
+            .buttonStyle(.borderless)
+            .padding(8)
+        }
+        .sheet(isPresented: $showingAdd) {
+            SubscriptionEditor(
+                existing: nil,
+                defaultServer: store.defaultServer
+            ) { newSub in
+                store.addSubscription(newSub)
+            }
+        }
+        .sheet(item: $editing) { sub in
+            SubscriptionEditor(
+                existing: sub,
+                defaultServer: store.defaultServer
+            ) { updated in
+                store.updateSubscription(updated)
+            }
+        }
+    }
+}
+
+private struct SubscriptionRow: View {
+    let sub: Subscription
+    let defaultServer: String
+
+    var body: some View {
+        HStack(spacing: 10) {
+            RoundedRectangle(cornerRadius: 6, style: .continuous)
+                .fill(Theme.tint(for: sub))
+                .frame(width: 26, height: 26)
+                .overlay {
+                    Image(systemName: Theme.symbol(for: sub))
+                        .font(.system(size: 12, weight: .semibold))
+                        .foregroundStyle(.white)
+                }
+            VStack(alignment: .leading, spacing: 2) {
+                Text(sub.label)
+                    .font(.system(size: 13, weight: .medium))
+                HStack(spacing: 6) {
+                    Text(sub.topic)
+                        .font(.caption)
+                        .foregroundStyle(.secondary)
+                    if sub.serverURL != nil, !sub.serverURL!.isEmpty {
+                        Text("·")
+                            .foregroundStyle(.secondary)
+                        Text(sub.effectiveServer(default: defaultServer))
+                            .font(.caption)
+                            .foregroundStyle(.secondary)
+                            .lineLimit(1)
+                            .truncationMode(.middle)
+                    }
+                }
+            }
+            Spacer()
+        }
+        .padding(.vertical, 2)
+    }
+}
+
+private struct SubscriptionEditor: View {
+    let existing: Subscription?
+    let defaultServer: String
+    let onSave: (Subscription) -> Void
+
+    @Environment(\.dismiss) private var dismiss
+
+    @State private var topic: String = ""
+    @State private var displayName: String = ""
+    @State private var useCustomServer: Bool = false
+    @State private var server: String = ""
+    @State private var token: String = ""
+    @State private var iconName: String? = nil
+    @State private var colorName: String? = nil
+
+    private var canSave: Bool {
+        let t = topic.trimmingCharacters(in: .whitespacesAndNewlines)
+        guard !t.isEmpty else { return false }
+        if useCustomServer {
+            let s = server.trimmingCharacters(in: .whitespacesAndNewlines)
+            return !s.isEmpty && URL(string: s) != nil
+        }
+        return true
+    }
+
+    var body: some View {
+        VStack(alignment: .leading, spacing: 0) {
+            HStack {
+                Text(existing == nil ? "Subscribe to a topic" : "Edit subscription")
+                    .font(.headline)
+                Spacer()
+            }
+            .padding(.horizontal, 16)
+            .padding(.top, 16)
+            .padding(.bottom, 8)
+
+            Form {
+                Section {
+                    TextField("Topic", text: $topic, prompt: Text("e.g. alerts"))
+                    TextField("Display name (optional)", text: $displayName)
+                }
+
+                Section {
+                    Toggle("Use a different server for this topic", isOn: $useCustomServer)
+                    if useCustomServer {
+                        TextField("Server", text: $server, prompt: Text("https://ntfy.example.com"))
+                    } else {
+                        HStack {
+                            Text("Server")
+                            Spacer()
+                            Text(defaultServer)
+                                .foregroundStyle(.secondary)
+                        }
+                    }
+                }
+
+                Section {
+                    SecureField("Access token (optional)", text: $token)
+                } footer: {
+                    Text("Used for protected topics. Sent as Bearer token.")
+                        .font(.caption)
+                        .foregroundStyle(.secondary)
+                }
+
+                Section {
+                    AppearancePreviewRow(iconName: iconName, colorName: colorName)
+                    ColorPickerStrip(selection: $colorName)
+                    IconPickerStrip(selection: $iconName)
+                } header: {
+                    Text("Appearance")
+                } footer: {
+                    Text("Shown next to messages from this topic in the popup and history. Choose “Automatic” to derive the look from message tags.")
+                        .font(.caption)
+                        .foregroundStyle(.secondary)
+                }
+            }
+            .formStyle(.grouped)
+
+            HStack {
+                Spacer()
+                Button("Cancel") { dismiss() }
+                    .keyboardShortcut(.cancelAction)
+                Button(existing == nil ? "Subscribe" : "Save") { save() }
+                    .keyboardShortcut(.defaultAction)
+                    .disabled(!canSave)
+            }
+            .padding(16)
+        }
+        .frame(width: 460)
+        .onAppear { load() }
+    }
+
+    private func load() {
+        guard let existing else { return }
+        topic = existing.topic
+        displayName = existing.displayName ?? ""
+        if let s = existing.serverURL, !s.isEmpty {
+            useCustomServer = true
+            server = s
+        }
+        token = existing.token ?? ""
+        iconName = existing.iconName
+        colorName = existing.colorName
+    }
+
+    private func save() {
+        let trimmedTopic = topic.trimmingCharacters(in: .whitespacesAndNewlines)
+        let trimmedName = displayName.trimmingCharacters(in: .whitespacesAndNewlines)
+        let trimmedServer = server.trimmingCharacters(in: .whitespacesAndNewlines)
+        let trimmedToken = token.trimmingCharacters(in: .whitespacesAndNewlines)
+
+        let sub = Subscription(
+            id: existing?.id ?? UUID(),
+            topic: trimmedTopic,
+            serverURL: useCustomServer ? trimmedServer : nil,
+            token: trimmedToken.isEmpty ? nil : trimmedToken,
+            displayName: trimmedName.isEmpty ? nil : trimmedName,
+            iconName: iconName,
+            colorName: colorName
+        )
+        onSave(sub)
+        dismiss()
+    }
+}
+
+// MARK: - Appearance pickers
+
+private struct AppearancePreviewRow: View {
+    let iconName: String?
+    let colorName: String?
+
+    var body: some View {
+        HStack(spacing: 12) {
+            RoundedRectangle(cornerRadius: 8, style: .continuous)
+                .fill(resolvedColor)
+                .frame(width: 36, height: 36)
+                .overlay {
+                    Image(systemName: iconName ?? "bell.fill")
+                        .font(.system(size: 16, weight: .semibold))
+                        .foregroundStyle(.white)
+                }
+            VStack(alignment: .leading, spacing: 1) {
+                Text("Preview")
+                    .font(.system(size: 12, weight: .semibold))
+                Text(subtitle)
+                    .font(.system(size: 11))
+                    .foregroundStyle(.secondary)
+            }
+            Spacer()
+        }
+    }
+
+    private var resolvedColor: Color {
+        if let name = colorName, let c = Theme.color(named: name) { return c }
+        return .gray
+    }
+
+    private var subtitle: LocalizedStringKey {
+        if iconName == nil && colorName == nil { return "Automatic from message tags" }
+        if iconName == nil { return "Custom color, automatic icon" }
+        if colorName == nil { return "Custom icon, automatic color" }
+        return "Custom icon and color"
+    }
+}
+
+private struct ColorPickerStrip: View {
+    @Binding var selection: String?
+
+    var body: some View {
+        VStack(alignment: .leading, spacing: 6) {
+            Text("Color")
+                .font(.system(size: 12, weight: .semibold))
+            ScrollView(.horizontal, showsIndicators: false) {
+                HStack(spacing: 8) {
+                    AutomaticSwatch(isSelected: selection == nil) {
+                        selection = nil
+                    }
+                    ForEach(Theme.availableColors, id: \.name) { item in
+                        Circle()
+                            .fill(item.color)
+                            .frame(width: 26, height: 26)
+                            .overlay {
+                                if selection == item.name {
+                                    Image(systemName: "checkmark")
+                                        .font(.system(size: 11, weight: .bold))
+                                        .foregroundStyle(.white)
+                                }
+                            }
+                            .overlay {
+                                Circle()
+                                    .strokeBorder(Color.primary.opacity(selection == item.name ? 0.35 : 0), lineWidth: 1.5)
+                            }
+                            .onTapGesture { selection = item.name }
+                            .help(item.name.capitalized)
+                    }
+                }
+                .padding(.vertical, 2)
+            }
+        }
+    }
+}
+
+private struct IconPickerStrip: View {
+    @Binding var selection: String?
+
+    private let columns = [GridItem(.adaptive(minimum: 36, maximum: 36), spacing: 6)]
+
+    var body: some View {
+        VStack(alignment: .leading, spacing: 6) {
+            Text("Icon")
+                .font(.system(size: 12, weight: .semibold))
+            LazyVGrid(columns: columns, spacing: 6) {
+                AutomaticTile(isSelected: selection == nil) {
+                    selection = nil
+                }
+                ForEach(Theme.availableIcons, id: \.self) { name in
+                    Button {
+                        selection = name
+                    } label: {
+                        Image(systemName: name)
+                            .font(.system(size: 14, weight: .medium))
+                            .frame(width: 32, height: 32)
+                            .background {
+                                RoundedRectangle(cornerRadius: 6, style: .continuous)
+                                    .fill(selection == name ? Color.accentColor : Color.secondary.opacity(0.12))
+                            }
+                            .foregroundStyle(selection == name ? .white : .primary)
+                    }
+                    .buttonStyle(.plain)
+                    .help(name)
+                }
+            }
+        }
+    }
+}
+
+private struct AutomaticSwatch: View {
+    let isSelected: Bool
+    let action: () -> Void
+
+    var body: some View {
+        Button(action: action) {
+            Circle()
+                .strokeBorder(Color.secondary, style: StrokeStyle(lineWidth: 1.2, dash: [3, 3]))
+                .frame(width: 26, height: 26)
+                .overlay {
+                    Image(systemName: "wand.and.stars")
+                        .font(.system(size: 10, weight: .semibold))
+                        .foregroundStyle(isSelected ? .primary : .secondary)
+                }
+                .overlay {
+                    Circle()
+                        .strokeBorder(Color.primary.opacity(isSelected ? 0.35 : 0), lineWidth: 1.5)
+                }
+        }
+        .buttonStyle(.plain)
+        .help("Automatic")
+    }
+}
+
+private struct AutomaticTile: View {
+    let isSelected: Bool
+    let action: () -> Void
+
+    var body: some View {
+        Button(action: action) {
+            Image(systemName: "wand.and.stars")
+                .font(.system(size: 14, weight: .medium))
+                .frame(width: 32, height: 32)
+                .background {
+                    RoundedRectangle(cornerRadius: 6, style: .continuous)
+                        .fill(isSelected ? Color.accentColor : Color.secondary.opacity(0.12))
+                }
+                .foregroundStyle(isSelected ? .white : .primary)
+        }
+        .buttonStyle(.plain)
+        .help("Automatic")
+    }
+}
+
+// MARK: - About
+
+struct AboutSettingsView: View {
+    private var version: String {
+        let info = Bundle.main.infoDictionary
+        let short = info?["CFBundleShortVersionString"] as? String ?? "1.0"
+        let build = info?["CFBundleVersion"] as? String ?? "1"
+        return "Version \(short) (\(build))"
+    }
+
+    var body: some View {
+        VStack(spacing: 14) {
+            Spacer(minLength: 12)
+
+            Image("ntfyme")
+                .resizable()
+                .renderingMode(.template)
+                .scaledToFit()
+                .frame(width: 72, height: 72)
+                .foregroundStyle(.tint)
+
+            Text("ntfyme")
+                .font(.system(size: 24, weight: .bold))
+
+            Text(version)
+                .font(.callout)
+                .foregroundStyle(.secondary)
+
+            Text("A native macOS menu bar client for ntfy brought to you by Toepper.Rocks.")
+                .font(.body)
+                .multilineTextAlignment(.center)
+                .foregroundStyle(.secondary)
+                .padding(.horizontal, 32)
+
+            HStack(spacing: 16) {
+                Link(destination: URL(string: "https://toepper.rocks")!) {
+                    Label("toepper.rocks", systemImage: "link")
+                }
+                Link(destination: URL(string: "https://github.com/akandor/ntfyme")!) {
+                    Label("ntfyme on GitHub", systemImage: "chevron.left.forwardslash.chevron.right")
+                }
+            }
+            .font(.callout)
+            
+            HStack(spacing: 16) {
+                Link(destination: URL(string: "https://ntfy.sh")!) {
+                    Label("ntfy.sh", systemImage: "link")
+                }
+                Link(destination: URL(string: "https://github.com/binwiederhier/ntfy")!) {
+                    Label("ntfy on GitHub", systemImage: "chevron.left.forwardslash.chevron.right")
+                }
+            }
+            .font(.callout)
+
+            Spacer()
+
+            Text("ntfyme is not affiliated with the ntfy project.")
+                .font(.caption2)
+                .foregroundStyle(.tertiary)
+                .padding(.bottom, 12)
+        }
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .padding()
+    }
+}
+
+#Preview {
+    SettingsView()
+        .environmentObject(Store.shared)
+}
