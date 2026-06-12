@@ -77,6 +77,36 @@ enum Theme {
         subscription.iconName ?? "bell.fill"
     }
 
+    // MARK: - Priority indicator
+
+    static func priorityIcon(_ level: NtfyMessage.PriorityLevel) -> String? {
+        switch level {
+        case .max: return "chevron.up.2"
+        case .high: return "chevron.up"
+        case .normal: return nil
+        case .low: return "chevron.down"
+        case .min: return "chevron.down.2"
+        }
+    }
+
+    static func priorityTint(_ level: NtfyMessage.PriorityLevel) -> Color {
+        switch level {
+        case .max, .high: return .red
+        case .normal: return .blue
+        case .low, .min: return .secondary
+        }
+    }
+
+    static func priorityAccessibilityLabel(_ level: NtfyMessage.PriorityLevel) -> LocalizedStringKey {
+        switch level {
+        case .max: return "Max priority"
+        case .high: return "High priority"
+        case .normal: return "Default priority"
+        case .low: return "Low priority"
+        case .min: return "Min priority"
+        }
+    }
+
     // MARK: - Auto heuristics
 
     private static func autoTint(for message: NtfyMessage) -> Color {

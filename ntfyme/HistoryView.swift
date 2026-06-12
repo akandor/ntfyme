@@ -130,10 +130,16 @@ private struct HistoryRow: View {
                 }
 
             VStack(alignment: .leading, spacing: 2) {
-                HStack(alignment: .firstTextBaseline) {
+                HStack(alignment: .firstTextBaseline, spacing: 6) {
                     Text(Emoji.decorate(message.displayTitle, tags: message.tags))
                         .font(.system(size: 13, weight: .semibold))
                         .lineLimit(1)
+                    if let priorityIcon = Theme.priorityIcon(message.priorityLevel) {
+                        Image(systemName: priorityIcon)
+                            .font(.system(size: 9, weight: .bold))
+                            .foregroundStyle(Theme.priorityTint(message.priorityLevel))
+                            .help(Theme.priorityAccessibilityLabel(message.priorityLevel))
+                    }
                     Spacer(minLength: 8)
                     Text(message.date.formatted(date: .abbreviated, time: .shortened))
                         .font(.system(size: 11))
@@ -141,11 +147,15 @@ private struct HistoryRow: View {
                         .fixedSize()
                 }
                 if !message.displayBody.isEmpty {
-                    Text(message.displayBody)
+                    Text(message.displayBodyAttributed)
                         .font(.system(size: 12))
                         .foregroundStyle(.primary.opacity(0.85))
                         .lineLimit(3)
                         .multilineTextAlignment(.leading)
+                }
+                if let attachment = message.attachment {
+                    AttachmentView(attachment: attachment, token: subscription?.token, maxImageHeight: 180)
+                        .padding(.top, 2)
                 }
                 HStack(spacing: 6) {
                     Image(systemName: "number")

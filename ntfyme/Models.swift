@@ -1,4 +1,5 @@
 import Foundation
+import AppKit
 
 struct Subscription: Identifiable, Codable, Hashable, Sendable {
     var id: UUID = UUID()
@@ -27,6 +28,21 @@ struct Subscription: Identifiable, Codable, Hashable, Sendable {
     }
 }
 
+struct NtfyAttachment: Codable, Hashable, Sendable {
+    var name: String
+    var url: String
+    var type: String?
+    var size: Int?
+    var expires: Int?
+
+    var fileURL: URL? { URL(string: url) }
+    var isImage: Bool { (type ?? "").hasPrefix("image/") }
+    var sizeText: String? {
+        guard let size, size > 0 else { return nil }
+        return ByteCountFormatter.string(fromByteCount: Int64(size), countStyle: .file)
+    }
+}
+
 struct NtfyMessage: Identifiable, Codable, Hashable, Sendable {
     var id: String
     var time: Int
@@ -37,6 +53,7 @@ struct NtfyMessage: Identifiable, Codable, Hashable, Sendable {
     var priority: Int?
     var tags: [String]?
     var click: String?
+    var attachment: NtfyAttachment?
 
     // Local-only, set by store when message arrives.
     var subscriptionID: UUID?
@@ -44,7 +61,7 @@ struct NtfyMessage: Identifiable, Codable, Hashable, Sendable {
     var popupDismissed: Bool = false
 
     enum CodingKeys: String, CodingKey {
-        case id, time, event, topic, message, title, priority, tags, click, subscriptionID, read, popupDismissed
+        case id, time, event, topic, message, title, priority, tags, click, attachment, subscriptionID, read, popupDismissed
     }
 
     init(from decoder: Decoder) throws {
@@ -58,6 +75,7 @@ struct NtfyMessage: Identifiable, Codable, Hashable, Sendable {
         priority = try c.decodeIfPresent(Int.self, forKey: .priority)
         tags = try c.decodeIfPresent([String].self, forKey: .tags)
         click = try c.decodeIfPresent(String.self, forKey: .click)
+        attachment = try c.decodeIfPresent(NtfyAttachment.self, forKey: .attachment)
         subscriptionID = try c.decodeIfPresent(UUID.self, forKey: .subscriptionID)
         read = try c.decodeIfPresent(Bool.self, forKey: .read) ?? false
         popupDismissed = try c.decodeIfPresent(Bool.self, forKey: .popupDismissed) ?? false
@@ -65,6 +83,7 @@ struct NtfyMessage: Identifiable, Codable, Hashable, Sendable {
 
     init(id: String, time: Int, topic: String, message: String?, title: String?,
          priority: Int? = nil, tags: [String]? = nil, click: String? = nil,
+         attachment: NtfyAttachment? = nil,
          event: String? = "message", subscriptionID: UUID? = nil,
          read: Bool = false, popupDismissed: Bool = false) {
         self.id = id
@@ -76,6 +95,7 @@ struct NtfyMessage: Identifiable, Codable, Hashable, Sendable {
         self.priority = priority
         self.tags = tags
         self.click = click
+        self.attachment = attachment
         self.subscriptionID = subscriptionID
         self.read = read
         self.popupDismissed = popupDismissed
@@ -89,4 +109,29 @@ struct NtfyMessage: Identifiable, Codable, Hashable, Sendable {
     }
 
     var displayBody: String { message ?? "" }
+
+    enum PriorityLevel: Int, Sendable {
+        case min = 1, low = 2, normal = 3, high = 4, max = 5
+    }
+
+    var priorityLevel: PriorityLevel {
+        guard let priority else { return .normal }
+        return PriorityLevel(rawValue: priority) ?? .normal
+    }
+
+    // Body with autodetected URLs marked as `.link` so SwiftUI's
+    // Text(AttributedString) renders them tappable.
+    var displayBodyAttributed: AttributedString {
+        let body = displayBody
+        guard !body.isEmpty else { return AttributedString() }
+        let mutable = NSMutableAttributedString(string: body)
+        let range = NSRange(location: 0, length: (body as NSString).length)
+        if let detector = try? NSDataDetector(types: NSTextCheckingResult.CheckingType.link.rawValue) {
+            detector.enumerateMatches(in: body, range: range) { match, _, _ in
+                guard let match, let url = match.url else { return }
+                mutable.addAttribute(.link, value: url, range: match.range)
+            }
+        }
+        return AttributedString(mutable)
+    }
 }

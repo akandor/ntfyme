@@ -34,6 +34,14 @@ final class Store: ObservableObject {
         didSet { UserDefaults.standard.set(soundName, forKey: Keys.soundName) }
     }
 
+    @Published var highPrioritySoundEnabled: Bool {
+        didSet { UserDefaults.standard.set(highPrioritySoundEnabled, forKey: Keys.highPrioritySoundEnabled) }
+    }
+
+    @Published var highPrioritySoundName: String {
+        didSet { UserDefaults.standard.set(highPrioritySoundName, forKey: Keys.highPrioritySoundName) }
+    }
+
     @Published private(set) var launchAtLogin: Bool = false
 
     @Published var language: String {
@@ -88,6 +96,8 @@ final class Store: ObservableObject {
         static let paused = "notificationsPaused"
         static let soundEnabled = "soundEnabled"
         static let soundName = "soundName"
+        static let highPrioritySoundEnabled = "highPrioritySoundEnabled"
+        static let highPrioritySoundName = "highPrioritySoundName"
         static let language = "language"
     }
 
@@ -97,6 +107,8 @@ final class Store: ObservableObject {
         self.notificationsPaused = defaults.bool(forKey: Keys.paused)
         self.soundEnabled = defaults.object(forKey: Keys.soundEnabled) as? Bool ?? true
         self.soundName = defaults.string(forKey: Keys.soundName) ?? "default"
+        self.highPrioritySoundEnabled = defaults.bool(forKey: Keys.highPrioritySoundEnabled)
+        self.highPrioritySoundName = defaults.string(forKey: Keys.highPrioritySoundName) ?? "Hero"
         self.launchAtLogin = SMAppService.mainApp.status == .enabled
         self.language = defaults.string(forKey: Keys.language) ?? "system"
         if let data = defaults.data(forKey: Keys.subscriptions),

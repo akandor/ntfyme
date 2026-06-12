@@ -9,12 +9,18 @@ A native macOS menu bar client for [ntfy](https://ntfy.sh) — subscribe to topi
 - **Menu bar agent** — runs as a `LSUIElement`, no Dock icon, no window clutter
 - **Multiple subscriptions** — any topic on any ntfy server, with a per-topic server override and optional bearer token
 - **Per-topic appearance** — pick an SF Symbol and a color for each subscription; falls back to smart heuristics from message tags when left on automatic
-- **Native notifications** — banners via `UNUserNotificationCenter` with configurable sound (system default or one of 14 named macOS sounds), preview button included
+- **Native notifications** with sound control:
+  - Configurable sound (system default or one of 14 named macOS sounds) with a preview button
+  - **Separate sound for high-priority messages** (priority 4 or 5) so you can pick something louder/distinctive for things that actually need attention
+- **Priority indicators** — ntfy's 1–5 priorities are rendered as colored chevrons next to the title (red double-up for Max, single-up for High, hidden for Default, grey down for Low / double-down for Min)
 - **Emoji tag prefix** — ntfy's `tags: ["test_tube"]` shorthand is translated to the matching emoji and prepended to the title, same as the iOS/Android/web clients
+- **Attachments** — image attachments render as inline thumbnails, everything else as a tappable paperclip chip with filename + size; bearer tokens are forwarded so previews and downloads work on protected topics
+- **Clickable URLs in message bodies** — `NSDataDetector` runs over the body and turns URLs into accent-colored, underlined links opened by the system handler
+- **Scrollable popup** — the popup sizes to its content and starts scrolling at 420pt, so a flood of messages stays readable without pushing the menu off-screen
 - **History window** — searchable, topic-filterable list of every notification you've ever received; survives restarts
 - **Pause / resume** without unsubscribing — suppresses banners and sound, keeps the connection alive and the history rolling
 - **Launch at login** via `SMAppService.mainApp` — no helper bundle, no entitlement scopes to manage
-- **Localization-ready** — strings catalog (`Localizable.xcstrings`) shipping with English; language picker in Settings automatically lists whichever languages you translate the catalog into
+- **Localization-ready** — strings catalog (`Localizable.xcstrings`) shipping with English; the language picker in Settings automatically lists whichever languages you've translated the catalog into, with a restart prompt so the change takes effect cleanly
 - **App Sandbox + Hardened Runtime** enabled
 
 ## Screenshots
@@ -46,14 +52,24 @@ You'll need to substitute the `DEVELOPMENT_TEAM` in `ntfyme.xcodeproj/project.pb
 ## Using it
 
 1. Click the bell icon in the menu bar → **Settings…**
-2. **General** — set your default ntfy server (defaults to `https://ntfy.sh`), pick a sound, decide whether ntfyme launches at login
+2. **General** — set your default ntfy server (defaults to `https://ntfy.sh`), pick a default sound and (optionally) a louder one for High/Max priority, pick the UI language, decide whether ntfyme launches at login
 3. **Subscriptions** → `+` — pick a topic, optionally override the server, optionally drop in a bearer token, optionally pick a custom icon and color
-4. Send a test message from another machine:
+4. **About** — version info and links to the upstream ntfy project
+5. Send a test message from another machine:
 
    ```sh
+   # Plain
    curl -H "Title: Hello from curl" \
         -H "Tags: tada,rocket" \
-        -d "ntfyme is alive" \
+        -d "ntfyme is alive — https://ntfy.sh/docs" \
+        ntfy.sh/<your-topic>
+
+   # High priority — uses the alternate sound if you enabled one
+   curl -H "Priority: 5" -d "kitchen on fire" ntfy.sh/<your-topic>
+
+   # With an image attachment
+   curl -H "Attach: https://placecats.com/400/300" \
+        -d "cat" \
         ntfy.sh/<your-topic>
    ```
 
@@ -70,14 +86,14 @@ This does mean the app has to be running to receive. The launch-at-login toggle 
 ```
 ntfyme/
 ├── ntfymeApp.swift          Scene wiring: MenuBarExtra, Settings, History window
-├── ContentView.swift        Status bar popup
+├── ContentView.swift        Status bar popup (with scrollable measured-height card list)
 ├── HistoryView.swift        Full history window
 ├── SettingsView.swift       General / Subscriptions / About tabs
-├── Models.swift             Subscription, NtfyMessage
+├── AttachmentView.swift     Image thumbnails + paperclip chips, auth-aware download
+├── Models.swift             Subscription, NtfyMessage, NtfyAttachment, PriorityLevel
 ├── Store.swift              Persistence, stream lifecycle, preferences
-├── NtfyClient.swift / inline streamLoop in Store.swift
 ├── NotificationService.swift   UNUserNotifications wrapper
-├── Theme.swift              Icon/color palette and auto-detection heuristics
+├── Theme.swift              Icon/color palette, priority chevron, auto-detection heuristics
 ├── Emoji.swift              GitHub-style tag → emoji map
 ├── Localizable.xcstrings    String catalog (en, source)
 ├── Assets.xcassets/         Bell icon, ntfyme logo, accent color

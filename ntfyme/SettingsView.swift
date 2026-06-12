@@ -104,6 +104,39 @@ struct GeneralSettingsView: View {
                     .font(.caption)
                     .foregroundStyle(.secondary)
             }
+
+            Section {
+                Toggle("Use a different sound for high-priority messages", isOn: $store.highPrioritySoundEnabled)
+                    .disabled(!store.soundEnabled)
+
+                HStack {
+                    Picker("Sound", selection: $store.highPrioritySoundName) {
+                        ForEach(Store.availableSounds, id: \.self) { name in
+                            if name == "default" {
+                                Text("System default").tag(name)
+                            } else {
+                                Text(verbatim: name).tag(name)
+                            }
+                        }
+                    }
+                    .disabled(!store.soundEnabled || !store.highPrioritySoundEnabled)
+
+                    Button {
+                        NotificationService.shared.previewSound(named: store.highPrioritySoundName)
+                    } label: {
+                        Image(systemName: "play.circle")
+                    }
+                    .buttonStyle(.borderless)
+                    .disabled(!store.soundEnabled || !store.highPrioritySoundEnabled || store.highPrioritySoundName == "default")
+                    .help("Preview")
+                }
+            } header: {
+                Text("High-priority sound")
+            } footer: {
+                Text("Played for messages with priority High (4) or Max (5). Lower priorities use the sound chosen above.")
+                    .font(.caption)
+                    .foregroundStyle(.secondary)
+            }
         }
         .formStyle(.grouped)
         .padding()

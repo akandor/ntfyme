@@ -31,11 +31,15 @@ final class NotificationService: NSObject, UNUserNotificationCenterDelegate {
 
         let store = Store.shared
         if store.soundEnabled {
-            if store.soundName == "default" {
+            let isHighPriority = msg.priorityLevel.rawValue >= NtfyMessage.PriorityLevel.high.rawValue
+            let chosen: String = (isHighPriority && store.highPrioritySoundEnabled)
+                ? store.highPrioritySoundName
+                : store.soundName
+            if chosen == "default" {
                 content.sound = .default
             } else {
                 content.sound = nil
-                NSSound(named: store.soundName)?.play()
+                NSSound(named: chosen)?.play()
             }
         } else {
             content.sound = nil

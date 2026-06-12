@@ -6,7 +6,9 @@ struct StatusBarPopupView: View {
     @Environment(\.openSettings) private var openSettings
     @Environment(\.openWindow) private var openWindow
 
-    private let previewCount = 4
+    @State private var measuredListHeight: CGFloat = 0
+
+    private let listMaxHeight: CGFloat = 420
 
     var body: some View {
         VStack(spacing: 0) {
@@ -69,23 +71,39 @@ struct StatusBarPopupView: View {
                 subtitle: "Open View History to see past notifications."
             )
         } else {
-            VStack(spacing: 6) {
-                ForEach(store.popupMessages.prefix(previewCount)) { message in
-                    MessageCard(
-                        message: message,
-                        subscription: subscription(for: message),
-                        onClose: { store.dismissFromPopup(message) }
-                    )
-                    .onTapGesture {
-                        store.markRead(message)
-                        if let click = message.click, let url = URL(string: click) {
-                            NSWorkspace.shared.open(url)
+            ScrollView(.vertical, showsIndicators: true) {
+                LazyVStack(spacing: 6) {
+                    ForEach(store.popupMessages) { message in
+                        MessageCard(
+                            message: message,
+                            subscription: subscription(for: message),
+                            onClose: { store.dismissFromPopup(message) }
+                        )
+                        .onTapGesture {
+                            store.markRead(message)
+                            if let click = message.click, let url = URL(string: click) {
+                                NSWorkspace.shared.open(url)
+                            }
                         }
                     }
                 }
+                .padding(.horizontal, 8)
+                .padding(.bottom, 8)
+                .background(
+                    GeometryReader { geo in
+                        Color.clear
+                            .preference(key: PopupListHeightKey.self, value: geo.size.height)
+                    }
+                )
             }
-            .padding(.horizontal, 8)
-            .padding(.bottom, 8)
+            .onPreferenceChange(PopupListHeightKey.self) { measuredListHeight = $0 }
+            // MenuBarExtra's .window layout doesn't propose a height to its
+            // children, so we have to commit one. Use the actual measured
+            // content height (so a single card doesn't leave dead space
+            // above the menu), capped at listMaxHeight; beyond that the
+            // ScrollView scrolls. The fallback min keeps the first render
+            // from being 0pt before the preference fires.
+            .frame(height: min(max(measuredListHeight, 80), listMaxHeight))
         }
     }
 
@@ -182,7 +200,14 @@ private struct MessageCard: View {
                 HStack(alignment: .firstTextBaseline, spacing: 6) {
                     Text(Emoji.decorate(message.displayTitle, tags: message.tags))
                         .font(.system(size: 14, weight: .bold))
-                        .lineLimit(1)
+                        .multilineTextAlignment(.leading)
+                        .fixedSize(horizontal: false, vertical: true)
+                    if let priorityIcon = Theme.priorityIcon(message.priorityLevel) {
+                        Image(systemName: priorityIcon)
+                            .font(.system(size: 10, weight: .bold))
+                            .foregroundStyle(Theme.priorityTint(message.priorityLevel))
+                            .help(Theme.priorityAccessibilityLabel(message.priorityLevel))
+                    }
                     Spacer(minLength: 4)
                     Text(relativeTime)
                         .font(.system(size: 11))
@@ -202,12 +227,16 @@ private struct MessageCard: View {
                     .help("Dismiss")
                 }
                 if !message.displayBody.isEmpty {
-                    Text(message.displayBody)
+                    Text(message.displayBodyAttributed)
                         .font(.system(size: 12))
                         .foregroundStyle(.secondary)
                         .multilineTextAlignment(.leading)
                         .fixedSize(horizontal: false, vertical: true)
                         .frame(maxWidth: .infinity, alignment: .leading)
+                }
+                if let attachment = message.attachment {
+                    AttachmentView(attachment: attachment, token: subscription?.token, maxImageHeight: 140)
+                        .padding(.top, 2)
                 }
             }
         }
@@ -271,6 +300,13 @@ private struct MenuRow: View {
         }
         .buttonStyle(.plain)
         .onHover { hovering = $0 }
+    }
+}
+
+private struct PopupListHeightKey: PreferenceKey {
+    static var defaultValue: CGFloat = 0
+    static func reduce(value: inout CGFloat, nextValue: () -> CGFloat) {
+        value = max(value, nextValue())
     }
 }
 
