@@ -1,6 +1,7 @@
 import Foundation
 import UserNotifications
 import AppKit
+import AVFoundation
 
 @MainActor
 final class NotificationService: NSObject, UNUserNotificationCenterDelegate {
@@ -39,7 +40,7 @@ final class NotificationService: NSObject, UNUserNotificationCenterDelegate {
                 content.sound = .default
             } else {
                 content.sound = nil
-                NSSound(named: chosen)?.play()
+                Self.playSystemSound(named: chosen)
             }
         } else {
             content.sound = nil
@@ -58,9 +59,30 @@ final class NotificationService: NSObject, UNUserNotificationCenterDelegate {
 
     func previewSound(named name: String) {
         if name == "default" {
-            NSSound(named: "Funk")?.play()
+            Self.playSystemSound(named: "Funk")
         } else {
-            NSSound(named: name)?.play()
+            Self.playSystemSound(named: name)
+        }
+    }
+
+    // Keep one player alive across calls so the sound is actually heard
+    // (an AVAudioPlayer that goes out of scope is stopped before its
+    // buffer flushes). NSSound.play() would be simpler, but on the
+    // sandbox it triggers AudioAnalytics' mach-lookup precondition and
+    // crashes the process; AVAudioPlayer reading the .aiff file
+    // directly avoids that path.
+    private static var previewPlayer: AVAudioPlayer?
+
+    private static func playSystemSound(named name: String) {
+        let url = URL(fileURLWithPath: "/System/Library/Sounds/\(name).aiff")
+        guard FileManager.default.fileExists(atPath: url.path) else { return }
+        do {
+            let player = try AVAudioPlayer(contentsOf: url)
+            previewPlayer = player
+            player.prepareToPlay()
+            player.play()
+        } catch {
+            // ignore — sound is non-essential
         }
     }
 

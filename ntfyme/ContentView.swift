@@ -17,7 +17,7 @@ struct StatusBarPopupView: View {
             menuSection
         }
         .frame(width: 380)
-        .background(.ultraThinMaterial)
+        .modifier(GlassBackground(material: .regularMaterial))
     }
 
     // MARK: - Header
@@ -29,7 +29,7 @@ struct StatusBarPopupView: View {
                 .renderingMode(.template)
                 .scaledToFit()
                 .frame(width: 22, height: 22)
-                .foregroundStyle(.primary)
+                .foregroundStyle(.accent)
                 .opacity(0.85)
             Text("ntfy Notifications")
                 .font(.system(size: 17, weight: .bold))
@@ -116,7 +116,7 @@ struct StatusBarPopupView: View {
         VStack(spacing: 8) {
             Image(systemName: symbol)
                 .font(.system(size: 28))
-                .foregroundStyle(.secondary)
+                .foregroundStyle(.accent)
             Text(title)
                 .font(.system(size: 13, weight: .semibold))
             Text(subtitle)
@@ -300,6 +300,23 @@ private struct MenuRow: View {
         }
         .buttonStyle(.plain)
         .onHover { hovering = $0 }
+    }
+}
+
+// On macOS 26 (Tahoe) the new liquid-glass appearance is exposed via
+// `glassEffect(_:in:)`. The deployment target is older than that, so we
+// gate it behind an availability check and fall back to the previous
+// material-backed appearance on Sequoia and earlier.
+struct GlassBackground: ViewModifier {
+    let material: Material
+
+    @ViewBuilder
+    func body(content: Content) -> some View {
+        if #available(macOS 26.0, *) {
+            content.glassEffect(.regular, in: Rectangle())
+        } else {
+            content.background(material)
+        }
     }
 }
 

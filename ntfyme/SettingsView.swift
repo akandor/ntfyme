@@ -92,10 +92,12 @@ struct GeneralSettingsView: View {
                         NotificationService.shared.previewSound(named: store.soundName)
                     } label: {
                         Image(systemName: "play.circle")
+                            .frame(width: 22, height: 22)
+                            .contentShape(Rectangle())
                     }
                     .buttonStyle(.borderless)
                     .disabled(!store.soundEnabled || store.soundName == "default")
-                    .help("Preview")
+                    .help("Play a preview of this sound")
                 }
             } header: {
                 Text("Sound")
@@ -125,10 +127,12 @@ struct GeneralSettingsView: View {
                         NotificationService.shared.previewSound(named: store.highPrioritySoundName)
                     } label: {
                         Image(systemName: "play.circle")
+                            .frame(width: 22, height: 22)
+                            .contentShape(Rectangle())
                     }
                     .buttonStyle(.borderless)
                     .disabled(!store.soundEnabled || !store.highPrioritySoundEnabled || store.highPrioritySoundName == "default")
-                    .help("Preview")
+                    .help("Play a preview of this sound")
                 }
             } header: {
                 Text("High-priority sound")
@@ -193,6 +197,8 @@ struct SubscriptionsSettingsView: View {
                         .tag(sub.id)
                         .contextMenu {
                             Button("Edit…") { editing = sub }
+                            Button("Send test message") { store.sendTestMessage(sub) }
+                            Divider()
                             Button("Remove", role: .destructive) { store.removeSubscription(sub) }
                         }
                 }
@@ -201,13 +207,15 @@ struct SubscriptionsSettingsView: View {
 
             Divider()
 
-            HStack {
+            HStack(spacing: 2) {
                 Button {
                     showingAdd = true
                 } label: {
                     Image(systemName: "plus")
+                        .frame(width: 24, height: 22)
+                        .contentShape(Rectangle())
                 }
-                .help("Subscribe to a topic")
+                .help("Subscribe to a new topic")
 
                 Button {
                     guard let id = selection,
@@ -216,9 +224,11 @@ struct SubscriptionsSettingsView: View {
                     selection = nil
                 } label: {
                     Image(systemName: "minus")
+                        .frame(width: 24, height: 22)
+                        .contentShape(Rectangle())
                 }
                 .disabled(selection == nil)
-                .help("Unsubscribe")
+                .help("Unsubscribe from the selected topic")
 
                 Button {
                     guard let id = selection,
@@ -226,9 +236,23 @@ struct SubscriptionsSettingsView: View {
                     editing = sub
                 } label: {
                     Image(systemName: "pencil")
+                        .frame(width: 24, height: 22)
+                        .contentShape(Rectangle())
                 }
                 .disabled(selection == nil)
-                .help("Edit")
+                .help("Edit the selected subscription")
+
+                Button {
+                    guard let id = selection,
+                          let sub = store.subscriptions.first(where: { $0.id == id }) else { return }
+                    store.sendTestMessage(sub)
+                } label: {
+                    Image(systemName: "paperplane")
+                        .frame(width: 24, height: 22)
+                        .contentShape(Rectangle())
+                }
+                .disabled(selection == nil)
+                .help("Send a test notification to the selected topic")
 
                 Spacer()
             }

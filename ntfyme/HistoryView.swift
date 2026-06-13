@@ -18,49 +18,41 @@ struct HistoryView: View {
     }
 
     var body: some View {
-        VStack(spacing: 0) {
-            toolbar
-            Divider()
+        Group {
             if filteredMessages.isEmpty {
                 emptyState
             } else {
                 messageList
             }
         }
-        .frame(minWidth: 600, minHeight: 400)
-    }
-
-    private var toolbar: some View {
-        HStack(spacing: 10) {
-            Image(systemName: "magnifyingglass")
-                .foregroundStyle(.secondary)
-            TextField("Search messages", text: $search)
-                .textFieldStyle(.plain)
-
-            Picker("Topic", selection: $topicFilter) {
-                Text("All topics").tag(UUID?.none)
-                ForEach(store.subscriptions) { sub in
-                    Text(sub.label).tag(UUID?.some(sub.id))
+        .frame(minWidth: 700, minHeight: 400)
+        .searchable(text: $search, prompt: Text("Search messages"))
+        .toolbar {
+            ToolbarItem(placement: .automatic) {
+                Picker("Topic", selection: $topicFilter) {
+                    Text("All topics").tag(UUID?.none)
+                    ForEach(store.subscriptions) { sub in
+                        Text(sub.label).tag(UUID?.some(sub.id))
+                    }
                 }
             }
-            .pickerStyle(.menu)
-            .fixedSize()
-
-            Button {
-                store.markAllRead()
-            } label: {
-                Label("Mark all read", systemImage: "envelope.open")
+            ToolbarItem(placement: .automatic) {
+                Button {
+                    store.markAllRead()
+                } label: {
+                    Label("Mark all read", systemImage: "envelope.open")
+                }
+                .disabled(store.unreadCount == 0)
             }
-            .disabled(store.unreadCount == 0)
-
-            Button(role: .destructive) {
-                store.clearMessages()
-            } label: {
-                Label("Clear", systemImage: "trash")
+            ToolbarItem(placement: .automatic) {
+                Button(role: .destructive) {
+                    store.clearMessages()
+                } label: {
+                    Label("Clear", systemImage: "trash")
+                }
+                .disabled(store.messages.isEmpty)
             }
-            .disabled(store.messages.isEmpty)
         }
-        .padding(12)
     }
 
     private var emptyState: some View {

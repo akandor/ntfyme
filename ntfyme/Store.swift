@@ -162,6 +162,25 @@ final class Store: ObservableObject {
         messages.removeAll { $0.id == message.id }
     }
 
+    func sendTestMessage(_ sub: Subscription) {
+        let server = sub.effectiveServer(default: defaultServer)
+        let encoded = sub.topic.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? sub.topic
+        guard let url = URL(string: "\(server)/\(encoded)") else { return }
+        let token = sub.token
+        Task.detached {
+            var req = URLRequest(url: url)
+            req.httpMethod = "POST"
+            req.setValue("Test notification", forHTTPHeaderField: "Title")
+            req.setValue("https://github.com/akandor/ntfyme", forHTTPHeaderField: "Click")
+            if let token, !token.isEmpty {
+                req.setValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
+            }
+            let body = "🍁 You can attach files and URLs to messages too\nSo I heard you like ntfyme? If that's true, go to GitHub and star it, or to the App Store and rate it. Thanks! Oh yeah, this is a test notification."
+            req.httpBody = body.data(using: .utf8)
+            _ = try? await URLSession.shared.data(for: req)
+        }
+    }
+
     func setLaunchAtLogin(_ enabled: Bool) {
         do {
             if enabled, SMAppService.mainApp.status != .enabled {
