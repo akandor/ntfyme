@@ -3,7 +3,6 @@ import AppKit
 
 struct StatusBarPopupView: View {
     @EnvironmentObject var store: Store
-    @Environment(\.openSettings) private var openSettings
     @Environment(\.openWindow) private var openWindow
 
     @State private var measuredListHeight: CGFloat = 0
@@ -33,6 +32,10 @@ struct StatusBarPopupView: View {
                 .opacity(0.85)
             Text("ntfy Notifications")
                 .font(.system(size: 17, weight: .bold))
+            ConnectionIndicator(
+                state: store.aggregateConnection,
+                tooltip: connectionTooltip
+            )
             Spacer()
             if store.unreadCount > 0 {
                 Button {
@@ -107,6 +110,31 @@ struct StatusBarPopupView: View {
         }
     }
 
+    private func openMainWindow(tab: MainWindowTab) {
+        // Stamp the desired tab into UserDefaults before opening so the
+        // window's @AppStorage selection switches to it both on first
+        // open and when bringing an already-open window to the front.
+        UserDefaults.standard.set(tab.rawValue, forKey: MainWindowTab.storageKey)
+        openWindow(id: WindowIDs.main)
+        NSApp.activate(ignoringOtherApps: true)
+    }
+
+    private var connectionTooltip: String {
+        switch store.aggregateConnection {
+        case .none:
+            return String(localized: "No subscriptions")
+        case .allConnected:
+            let n = store.subscriptions.count
+            return String(format: String(localized: "Connected to %lld topic(s)"), n)
+        case .partial:
+            let connected = store.subscriptions.filter { store.connectionStates[$0.id] == .connected }.count
+            let total = store.subscriptions.count
+            return String(format: String(localized: "Connected to %lld of %lld topic(s)"), connected, total)
+        case .allDisconnected:
+            return String(localized: "Reconnecting…")
+        }
+    }
+
     private func subscription(for message: NtfyMessage) -> Subscription? {
         guard let id = message.subscriptionID else { return nil }
         return store.subscriptions.first { $0.id == id }
@@ -138,8 +166,7 @@ struct StatusBarPopupView: View {
                 systemImage: "gearshape",
                 shortcut: "⌘,"
             ) {
-                openSettings()
-                NSApp.activate(ignoringOtherApps: true)
+                openMainWindow(tab: .general)
             }
 
             if store.notificationsPaused {
@@ -158,8 +185,7 @@ struct StatusBarPopupView: View {
                 title: "View History",
                 systemImage: "clock.arrow.circlepath"
             ) {
-                openWindow(id: WindowIDs.history)
-                NSApp.activate(ignoringOtherApps: true)
+                openMainWindow(tab: .history)
             }
 
             Divider()
@@ -300,6 +326,36 @@ private struct MenuRow: View {
         }
         .buttonStyle(.plain)
         .onHover { hovering = $0 }
+    }
+}
+
+private struct ConnectionIndicator: View {
+    let state: Store.AggregateConnection
+    let tooltip: String
+
+    var body: some View {
+        if state == .none {
+            EmptyView()
+        } else {
+            Circle()
+                .fill(color)
+                .frame(width: 8, height: 8)
+                .overlay {
+                    Circle()
+                        .strokeBorder(Color.primary.opacity(0.12), lineWidth: 0.5)
+                }
+                .help(tooltip)
+                .accessibilityLabel(Text(tooltip))
+        }
+    }
+
+    private var color: Color {
+        switch state {
+        case .allConnected: return .green
+        case .partial: return .orange
+        case .allDisconnected: return .red
+        case .none: return .gray
+        }
     }
 }
 

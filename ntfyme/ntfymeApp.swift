@@ -13,6 +13,16 @@ struct ntfymeApp: App {
         let saved = UserDefaults.standard.string(forKey: "language") ?? "system"
         Store.applyLanguageOverride(saved)
 
+        // Hand AppKit the bundle icon BEFORE we trigger the notification
+        // authorization prompt. The user-notifications subsystem
+        // snapshots the bundle's icon at first authorization and reuses
+        // that cached image for every banner and the System Settings →
+        // Notifications row forever after, so getting it right at this
+        // moment matters for new installs.
+        if let icon = AppIconResolver.resolve() {
+            NSApplication.shared.applicationIconImage = icon
+        }
+
         Task { @MainActor in
             await NotificationService.shared.requestAuthorizationIfNeeded()
             Store.shared.startAll()
@@ -28,16 +38,11 @@ struct ntfymeApp: App {
         }
         .menuBarExtraStyle(.window)
 
-        Settings {
-            SettingsView()
+        Window("ntfyme", id: WindowIDs.main) {
+            MainWindowView()
                 .environmentObject(store)
         }
-
-        Window("ntfyme History", id: WindowIDs.history) {
-            HistoryView()
-                .environmentObject(store)
-        }
-        .defaultSize(width: 720, height: 520)
+        .defaultSize(width: 820, height: 560)
     }
 
     private var showsUnreadDot: Bool {
@@ -46,7 +51,15 @@ struct ntfymeApp: App {
 }
 
 enum WindowIDs {
-    static let history = "history"
+    static let main = "main"
+}
+
+enum MainWindowTab: String {
+    case general, subscriptions, history, about
+
+    /// UserDefaults key the popup writes before calling openWindow, so the
+    /// window's @AppStorage-backed selection switches to the right tab.
+    static let storageKey = "mainWindowTab"
 }
 
 // We hand SwiftUI a pre-sized NSImage rather than Image("bell") with

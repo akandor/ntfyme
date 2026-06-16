@@ -1,3276 +1,3311 @@
 {
-  "sourceLanguage": "en",
-  "strings": {
-    "·": {},
-    "\"System default\" follows the macOS notification sound and respects Do Not Disturb. Named sounds play directly and will be heard even while a Focus mode is active.": {
-      "localizations": {
-        "de": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "„Systemstandard“ verwendet den Standard-Benachrichtigungston von macOS und berücksichtigt den Modus „Nicht stören“. Benannte Töne werden direkt abgespielt und sind auch dann zu hören, wenn der Fokusmodus aktiv ist."
+  "sourceLanguage" : "en",
+  "strings" : {
+    "·" : {
+
+    },
+    "\"System default\" follows the macOS notification sound and respects Do Not Disturb. Named sounds play directly and will be heard even while a Focus mode is active." : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "„Systemstandard“ verwendet den Standard-Benachrichtigungston von macOS und berücksichtigt den Modus „Nicht stören“. Benannte Töne werden direkt abgespielt und sind auch dann zu hören, wenn der Fokusmodus aktiv ist."
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "« Système par défaut » utilise le son de notification par défaut de macOS et respecte le mode Ne pas déranger. Les sons nommés sont joués directement et seront audibles même si un mode Concentration est actif."
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "«Predeterminado del sistema» sigue el sonido de notificación de macOS y respeta No molestar. Los sonidos con nombre se reproducen directamente y se oirán incluso con un modo Concentración activo."
           }
         },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "«Predeterminado del sistema» sigue el sonido de notificación de macOS y respeta No molestar. Los sonidos con nombre se reproducen directamente y se oirán incluso con un modo Concentración activo."
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "« Système par défaut » utilise le son de notification par défaut de macOS et respecte le mode Ne pas déranger. Les sons nommés sont joués directement et seront audibles même si un mode Concentration est actif."
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "「システムデフォルト」はmacOSの通知音に従い、おやすみモードを尊重します。名前付きサウンドは直接再生され、集中モードがオンでも聞こえます。"
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "«Predefinito di sistema» segue il suono di notifica di macOS e rispetta Non disturbare. I suoni con nome vengono riprodotti direttamente e saranno uditi anche se la modalità Focus è attiva."
           }
         },
-        "it": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "«Predefinito di sistema» segue il suono di notifica di macOS e rispetta Non disturbare. I suoni con nome vengono riprodotti direttamente e saranno uditi anche se la modalità Focus è attiva."
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "「システムデフォルト」はmacOSの通知音に従い、おやすみモードを尊重します。名前付きサウンドは直接再生され、集中モードがオンでも聞こえます。"
           }
         },
-        "pt-BR": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "«Padrão do sistema» segue o som de notificação do macOS e respeita Não perturbe. Sons nomeados tocam diretamente e serão ouvidos mesmo com o modo Foco ativo."
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "«Padrão do sistema» segue o som de notificação do macOS e respeita Não perturbe. Sons nomeados tocam diretamente e serão ouvidos mesmo com o modo Foco ativo."
           }
         }
       }
     },
-    "A native macOS menu bar client for ntfy brought to you by Toepper.Rocks.": {
-      "localizations": {
-        "de": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Ein nativer macOS-Menüleisten-Client für ntfy, bereitgestellt von Toepper.Rocks."
+    "A native macOS menu bar client for ntfy brought to you by Toepper.Rocks." : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ein nativer macOS-Menüleisten-Client für ntfy, bereitgestellt von Toepper.Rocks."
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Un client natif macOS dans la barre de menus pour ntfy, proposé par Toepper.Rocks."
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Un cliente nativo de macOS en la barra de menús para ntfy, ofrecido por Toepper.Rocks."
           }
         },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Un cliente nativo de macOS en la barra de menús para ntfy, ofrecido por Toepper.Rocks."
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Un client natif macOS dans la barre de menus pour ntfy, proposé par Toepper.Rocks."
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Toepper.Rocksによる、ntfy用のネイティブmacOSメニューバークライアント。"
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Un client nativo macOS nella barra dei menu per ntfy, offerto da Toepper.Rocks."
           }
         },
-        "it": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Un client nativo macOS nella barra dei menu per ntfy, offerto da Toepper.Rocks."
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Toepper.Rocksによる、ntfy用のネイティブmacOSメニューバークライアント。"
           }
         },
-        "pt-BR": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Um cliente nativo macOS na barra de menus para ntfy, oferecido por Toepper.Rocks."
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Um cliente nativo macOS na barra de menus para ntfy, oferecido por Toepper.Rocks."
           }
         }
       }
     },
-    "About": {
-      "localizations": {
-        "de": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Über"
+    "About" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Über"
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "À propos"
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Acerca de"
           }
         },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Acerca de"
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "À propos"
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "情報"
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Informazioni"
           }
         },
-        "it": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Informazioni"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "情報"
           }
         },
-        "pt-BR": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Sobre"
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sobre"
           }
         }
       }
     },
-    "Access token (optional)": {
-      "localizations": {
-        "de": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Access Token (Optional)"
+    "Access token (optional)" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Access Token (Optional)"
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Jeton d'accès (facultatif)"
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Token de acceso (opcional)"
           }
         },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Token de acceso (opcional)"
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Jeton d'accès (facultatif)"
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "アクセストークン(オプション)"
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Token di accesso (opzionale)"
           }
         },
-        "it": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Token di accesso (opzionale)"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "アクセストークン(オプション)"
           }
         },
-        "pt-BR": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Token de acesso (opcional)"
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Token de acesso (opcional)"
           }
         }
       }
     },
-    "Add a topic in Settings to start receiving notifications.": {
-      "localizations": {
-        "de": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Füge in den Einstellungen ein Thema hinzu, um Benachrichtigungen zu erhalten."
+    "Add a topic in Settings to start receiving notifications." : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Füge in den Einstellungen ein Thema hinzu, um Benachrichtigungen zu erhalten."
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Ajoutez un sujet dans les Réglages pour commencer à recevoir des notifications."
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Añade un tema en Ajustes para empezar a recibir notificaciones."
           }
         },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Añade un tema en Ajustes para empezar a recibir notificaciones."
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ajoutez un sujet dans les Réglages pour commencer à recevoir des notifications."
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "通知を受け取るには、設定でトピックを追加してください。"
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aggiungi un argomento in Impostazioni per iniziare a ricevere notifiche."
           }
         },
-        "it": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Aggiungi un argomento in Impostazioni per iniziare a ricevere notifiche."
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "通知を受け取るには、設定でトピックを追加してください。"
           }
         },
-        "pt-BR": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Adicione um tópico nas Configurações para começar a receber notificações."
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Adicione um tópico nas Configurações para começar a receber notificações."
           }
         }
       }
     },
-    "All topics": {
-      "localizations": {
-        "de": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Alle Themen"
+    "All topics" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Alle Themen"
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Tous les sujets"
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Todos los temas"
           }
         },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Todos los temas"
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tous les sujets"
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "すべてのトピック"
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tutti gli argomenti"
           }
         },
-        "it": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Tutti gli argomenti"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "すべてのトピック"
           }
         },
-        "pt-BR": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Todos os tópicos"
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Todos os tópicos"
           }
         }
       }
     },
-    "Appearance": {
-      "localizations": {
-        "de": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Aussehen"
+    "Appearance" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aussehen"
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Apparence"
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Apariencia"
           }
         },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Apariencia"
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Apparence"
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "外観"
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aspetto"
           }
         },
-        "it": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Aspetto"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "外観"
           }
         },
-        "pt-BR": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Aparência"
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aparência"
           }
         }
       }
     },
-    "Apply": {
-      "localizations": {
-        "de": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Bestätigen"
+    "Apply" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bestätigen"
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Appliquer"
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aplicar"
           }
         },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Aplicar"
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Appliquer"
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "適用"
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Applica"
           }
         },
-        "it": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Applica"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "適用"
           }
         },
-        "pt-BR": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Aplicar"
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aplicar"
           }
         }
       }
     },
-    "Automatic": {
-      "localizations": {
-        "de": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Automatisch"
+    "Automatic" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Automatisch"
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Automatique"
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Automático"
           }
         },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Automático"
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Automatique"
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "自動"
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Automatico"
           }
         },
-        "it": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Automatico"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "自動"
           }
         },
-        "pt-BR": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Automático"
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Automático"
           }
         }
       }
     },
-    "Automatic from message tags": {
-      "localizations": {
-        "de": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Automatisch anhand von Nachrichten-Tags"
+    "Automatic from message tags" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Automatisch anhand von Nachrichten-Tags"
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Automatique selon les étiquettes du message"
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Automático según las etiquetas del mensaje"
           }
         },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Automático según las etiquetas del mensaje"
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Automatique selon les étiquettes du message"
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "メッセージタグから自動"
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Automatico in base ai tag del messaggio"
           }
         },
-        "it": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Automatico in base ai tag del messaggio"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "メッセージタグから自動"
           }
         },
-        "pt-BR": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Automático com base nas tags da mensagem"
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Automático com base nas tags da mensagem"
           }
         }
       }
     },
-    "Cancel": {
-      "localizations": {
-        "de": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Abbrechen"
+    "Cancel" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Abbrechen"
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Annuler"
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cancelar"
           }
         },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Cancelar"
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Annuler"
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "キャンセル"
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Annulla"
           }
         },
-        "it": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Annulla"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "キャンセル"
           }
         },
-        "pt-BR": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Cancelar"
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cancelar"
           }
         }
       }
     },
-    "Clear": {
-      "localizations": {
-        "de": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Leeren"
+    "Clear" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Leeren"
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Effacer"
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Borrar"
           }
         },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Borrar"
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Effacer"
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "クリア"
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cancella"
           }
         },
-        "it": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Cancella"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "クリア"
           }
         },
-        "pt-BR": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Limpar"
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Limpar"
           }
         }
       }
     },
-    "Color": {
-      "localizations": {
-        "de": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Farbe"
+    "Color" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Farbe"
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Couleur"
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Color"
           }
         },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Color"
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Couleur"
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "カラー"
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Colore"
           }
         },
-        "it": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Colore"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "カラー"
           }
         },
-        "pt-BR": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Cor"
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cor"
+          }
+        }
+      }
+    },
+    "Connected to %lld of %lld topic(s)" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Connected to %1$lld of %2$lld topic(s)"
           }
         }
       }
     },
-    "Custom color, automatic icon": {
-      "localizations": {
-        "de": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Benutzerdefinierte Farbe, automatisches Symbol"
+    "Connected to %lld topic(s)" : {
+
+    },
+    "Custom color, automatic icon" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Benutzerdefinierte Farbe, automatisches Symbol"
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Couleur personnalisée, icône automatique"
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Color personalizado, icono automático"
           }
         },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Color personalizado, icono automático"
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Couleur personnalisée, icône automatique"
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "カスタムカラー、自動アイコン"
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Colore personalizzato, icona automatica"
           }
         },
-        "it": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Colore personalizzato, icona automatica"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "カスタムカラー、自動アイコン"
           }
         },
-        "pt-BR": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Cor personalizada, ícone automático"
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cor personalizada, ícone automático"
           }
         }
       }
     },
-    "Custom icon and color": {
-      "localizations": {
-        "de": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Benutzerdefiniertes Symbol und Farbe"
+    "Custom icon and color" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Benutzerdefiniertes Symbol und Farbe"
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Icône et couleur personnalisées"
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Icono y color personalizados"
           }
         },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Icono y color personalizados"
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Icône et couleur personnalisées"
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "カスタムアイコンとカラー"
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Icona e colore personalizzati"
           }
         },
-        "it": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Icona e colore personalizzati"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "カスタムアイコンとカラー"
           }
         },
-        "pt-BR": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Ícone e cor personalizados"
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ícone e cor personalizados"
           }
         }
       }
     },
-    "Custom icon, automatic color": {
-      "localizations": {
-        "de": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Benutzerdefiniertes Symbol, automatische Farbzuweisung"
+    "Custom icon, automatic color" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Benutzerdefiniertes Symbol, automatische Farbzuweisung"
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Icône personnalisée, couleur automatique"
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Icono personalizado, color automático"
           }
         },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Icono personalizado, color automático"
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Icône personnalisée, couleur automatique"
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "カスタムアイコン、自動カラー"
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Icona personalizzata, colore automatico"
           }
         },
-        "it": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Icona personalizzata, colore automatico"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "カスタムアイコン、自動カラー"
           }
         },
-        "pt-BR": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Ícone personalizado, cor automática"
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ícone personalizado, cor automática"
           }
         }
       }
     },
-    "Default priority": {
-      "localizations": {
-        "de": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Standardpriorität"
+    "Default priority" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Standardpriorität"
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Priorité par défaut"
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Prioridad predeterminada"
           }
         },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Prioridad predeterminada"
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Priorité par défaut"
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "デフォルト優先度"
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Priorità predefinita"
           }
         },
-        "it": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Priorità predefinita"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "デフォルト優先度"
           }
         },
-        "pt-BR": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Prioridade padrão"
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Prioridade padrão"
           }
         }
       }
     },
-    "Default server": {
-      "localizations": {
-        "de": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Standard-Server"
+    "Default server" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Standard-Server"
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Serveur par défaut"
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Servidor predeterminado"
           }
         },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Servidor predeterminado"
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Serveur par défaut"
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "デフォルトサーバー"
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Server predefinito"
           }
         },
-        "it": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Server predefinito"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "デフォルトサーバー"
           }
         },
-        "pt-BR": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Servidor padrão"
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Servidor padrão"
           }
         }
       }
     },
-    "Dismiss": {
-      "localizations": {
-        "de": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Abbrechen"
+    "Dismiss" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Abbrechen"
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Ignorer"
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Descartar"
           }
         },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Descartar"
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ignorer"
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "閉じる"
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ignora"
           }
         },
-        "it": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Ignora"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "閉じる"
           }
         },
-        "pt-BR": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Dispensar"
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dispensar"
           }
         }
       }
     },
-    "Display name (optional)": {
-      "localizations": {
-        "de": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Anzeigename (Optional)"
+    "Display name (optional)" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Anzeigename (Optional)"
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Nom d'affichage (facultatif)"
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nombre visible (opcional)"
           }
         },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Nombre visible (opcional)"
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nom d'affichage (facultatif)"
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "表示名(オプション)"
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nome visualizzato (opzionale)"
           }
         },
-        "it": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Nome visualizzato (opzionale)"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "表示名(オプション)"
           }
         },
-        "pt-BR": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Nome exibido (opcional)"
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nome exibido (opcional)"
           }
         }
       }
     },
-    "e.g. alerts": {
-      "localizations": {
-        "de": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "z. B. Benachrichtigungen"
+    "e.g. alerts" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "z. B. Benachrichtigungen"
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "ex. alertes"
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ej. alertas"
           }
         },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "ej. alertas"
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ex. alertes"
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "例: alerts"
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "es. avvisi"
           }
         },
-        "it": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "es. avvisi"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "例: alerts"
           }
         },
-        "pt-BR": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "ex. alertas"
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ex. alertas"
           }
         }
       }
     },
-    "Edit": {
-      "extractionState": "stale",
-      "localizations": {
-        "de": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Bearbeiten"
+    "Edit" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bearbeiten"
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Modifier"
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Editar"
           }
         },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Editar"
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Modifier"
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "編集"
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Modifica"
           }
         },
-        "it": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Modifica"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "編集"
           }
         },
-        "pt-BR": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Editar"
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Editar"
           }
         }
       }
     },
-    "Edit subscription": {
-      "localizations": {
-        "de": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Abonnement bearbeiten"
+    "Edit subscription" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Abonnement bearbeiten"
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Modifier l'abonnement"
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Editar suscripción"
           }
         },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Editar suscripción"
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Modifier l'abonnement"
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "サブスクリプションを編集"
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Modifica abbonamento"
           }
         },
-        "it": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Modifica abbonamento"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "サブスクリプションを編集"
           }
         },
-        "pt-BR": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Editar inscrição"
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Editar inscrição"
           }
         }
       }
     },
-    "Edit the selected subscription": {
-      "localizations": {
-        "de": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Das ausgewählte Abonnement bearbeiten"
+    "Edit the selected subscription" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Das ausgewählte Abonnement bearbeiten"
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Modifier l'abonnement sélectionné"
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Editar la suscripción seleccionada"
           }
         },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Editar la suscripción seleccionada"
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Modifier l'abonnement sélectionné"
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "選択したサブスクリプションを編集"
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Modifica l'abbonamento selezionato"
           }
         },
-        "it": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Modifica l'abbonamento selezionato"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "選択したサブスクリプションを編集"
           }
         },
-        "pt-BR": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Editar a inscrição selecionada"
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Editar a inscrição selecionada"
           }
         }
       }
     },
-    "Edit…": {
-      "localizations": {
-        "de": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Bearbeiten…"
+    "Edit…" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bearbeiten…"
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Modifier…"
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Editar…"
           }
         },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Editar…"
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Modifier…"
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "編集…"
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Modifica…"
           }
         },
-        "it": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Modifica…"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "編集…"
           }
         },
-        "pt-BR": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Editar…"
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Editar…"
           }
         }
       }
     },
-    "General": {
-      "localizations": {
-        "de": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Allgemein"
+    "General" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Allgemein"
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Général"
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "General"
           }
         },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "General"
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Général"
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "一般"
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Generale"
           }
         },
-        "it": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Generale"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "一般"
           }
         },
-        "pt-BR": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Geral"
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Geral"
           }
         }
       }
     },
-    "High priority": {
-      "localizations": {
-        "de": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Hohe Priorität"
+    "High priority" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hohe Priorität"
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Priorité élevée"
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Prioridad alta"
           }
         },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Prioridad alta"
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Priorité élevée"
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "高優先度"
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Priorità alta"
           }
         },
-        "it": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Priorità alta"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "高優先度"
           }
         },
-        "pt-BR": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Prioridade alta"
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Prioridade alta"
           }
         }
       }
     },
-    "High-priority sound": {
-      "localizations": {
-        "de": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Hoher Prioritätston"
+    "High-priority sound" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hoher Prioritätston"
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Son pour priorité élevée"
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sonido de prioridad alta"
           }
         },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Sonido de prioridad alta"
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Son pour priorité élevée"
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "高優先度サウンド"
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Suono priorità alta"
           }
         },
-        "it": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Suono priorità alta"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "高優先度サウンド"
           }
         },
-        "pt-BR": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Som de prioridade alta"
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Som de prioridade alta"
           }
         }
       }
+    },
+    "History" : {
+
     },
-    "https://ntfy.example.com": {},
-    "https://ntfy.sh": {},
-    "Icon": {
-      "localizations": {
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Icône"
+    "https://ntfy.example.com" : {
+
+    },
+    "https://ntfy.sh" : {
+
+    },
+    "Icon" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Icono"
           }
         },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Icono"
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Icône"
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "アイコン"
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Icona"
           }
         },
-        "it": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Icona"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "アイコン"
           }
         },
-        "pt-BR": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Ícone"
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ícone"
           }
         }
       }
     },
-    "Language": {
-      "localizations": {
-        "de": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Sprache"
+    "Language" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sprache"
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Langue"
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Idioma"
           }
         },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Idioma"
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Langue"
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "言語"
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lingua"
           }
         },
-        "it": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Lingua"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "言語"
           }
         },
-        "pt-BR": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Idioma"
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Idioma"
           }
         }
       }
     },
-    "Language change": {
-      "localizations": {
-        "de": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Sprachenwechsel"
+    "Language change" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sprachenwechsel"
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Changement de langue"
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cambio de idioma"
           }
         },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Cambio de idioma"
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Changement de langue"
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "言語の変更"
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cambio lingua"
           }
         },
-        "it": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Cambio lingua"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "言語の変更"
           }
         },
-        "pt-BR": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Mudança de idioma"
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mudança de idioma"
           }
         }
       }
     },
-    "Later": {
-      "localizations": {
-        "de": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Später"
+    "Later" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Später"
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Plus tard"
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Más tarde"
           }
         },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Más tarde"
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Plus tard"
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "後で"
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Più tardi"
           }
         },
-        "it": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Più tardi"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "後で"
           }
         },
-        "pt-BR": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Mais tarde"
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mais tarde"
           }
         }
       }
     },
-    "Launch at login": {
-      "localizations": {
-        "de": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Beim Anmelden starten"
+    "Launch at login" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Beim Anmelden starten"
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Lancer à l'ouverture de session"
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Abrir al iniciar sesión"
           }
         },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Abrir al iniciar sesión"
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lancer à l'ouverture de session"
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "ログイン時に起動"
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Avvia al login"
           }
         },
-        "it": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Avvia al login"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ログイン時に起動"
           }
         },
-        "pt-BR": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Iniciar ao fazer login"
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Iniciar ao fazer login"
           }
         }
       }
     },
-    "Low priority": {
-      "localizations": {
-        "de": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Niedrige Priorität"
+    "Low priority" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Niedrige Priorität"
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Priorité faible"
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Prioridad baja"
           }
         },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Prioridad baja"
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Priorité faible"
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "低優先度"
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Priorità bassa"
           }
         },
-        "it": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Priorità bassa"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "低優先度"
           }
         },
-        "pt-BR": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Prioridade baixa"
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Prioridade baixa"
           }
         }
       }
     },
-    "Mark all as read": {
-      "localizations": {
-        "de": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Markiere alle als gelesen"
+    "Mark all as read" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Markiere alle als gelesen"
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Tout marquer comme lu"
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Marcar todo como leído"
           }
         },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Marcar todo como leído"
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tout marquer comme lu"
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "すべて既読にする"
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Segna tutto come letto"
           }
         },
-        "it": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Segna tutto come letto"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "すべて既読にする"
           }
         },
-        "pt-BR": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Marcar tudo como lido"
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Marcar tudo como lido"
           }
         }
       }
     },
-    "Mark all read": {
-      "localizations": {
-        "de": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Als gelesen markieren"
+    "Mark all read" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Als gelesen markieren"
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Tout marquer lu"
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Marcar todo leído"
           }
         },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Marcar todo leído"
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tout marquer lu"
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "すべて既読"
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Segna tutto letto"
           }
         },
-        "it": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Segna tutto letto"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "すべて既読"
           }
         },
-        "pt-BR": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Marcar tudo lido"
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Marcar tudo lido"
           }
         }
       }
     },
-    "Max priority": {
-      "localizations": {
-        "de": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Höchste Priorität"
+    "Max priority" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Höchste Priorität"
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Priorité maximale"
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Prioridad máxima"
           }
         },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Prioridad máxima"
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Priorité maximale"
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "最大優先度"
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Priorità massima"
           }
         },
-        "it": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Priorità massima"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "最大優先度"
           }
         },
-        "pt-BR": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Prioridade máxima"
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Prioridade máxima"
           }
         }
       }
     },
-    "Min priority": {
-      "localizations": {
-        "de": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Niedrigste Priorität"
+    "Min priority" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Niedrigste Priorität"
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Priorité minimale"
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Prioridad mínima"
           }
         },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Prioridad mínima"
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Priorité minimale"
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "最小優先度"
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Priorità minima"
           }
         },
-        "it": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Priorità minima"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "最小優先度"
           }
         },
-        "pt-BR": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Prioridade mínima"
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Prioridade mínima"
           }
         }
       }
     },
-    "No matches": {
-      "localizations": {
-        "de": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Keine Treffer"
+    "No matches" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Keine Treffer"
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Aucun résultat"
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sin coincidencias"
           }
         },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Sin coincidencias"
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aucun résultat"
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "一致するものはありません"
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nessuna corrispondenza"
           }
         },
-        "it": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Nessuna corrispondenza"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "一致するものはありません"
           }
         },
-        "pt-BR": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Sem correspondências"
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sem correspondências"
           }
         }
       }
     },
-    "No messages yet": {
-      "localizations": {
-        "de": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Noch keine Nachrichten"
+    "No messages yet" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Noch keine Nachrichten"
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Aucun message"
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aún no hay mensajes"
           }
         },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Aún no hay mensajes"
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aucun message"
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "まだメッセージはありません"
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nessun messaggio ancora"
           }
         },
-        "it": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Nessun messaggio ancora"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "まだメッセージはありません"
           }
         },
-        "pt-BR": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Sem mensagens ainda"
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sem mensagens ainda"
           }
         }
       }
     },
-    "No new messages": {
-      "localizations": {
-        "de": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Keine neuen Nachrichten"
+    "No new messages" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Keine neuen Nachrichten"
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Aucun nouveau message"
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No hay mensajes nuevos"
           }
         },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "No hay mensajes nuevos"
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aucun nouveau message"
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "新しいメッセージはありません"
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nessun nuovo messaggio"
           }
         },
-        "it": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Nessun nuovo messaggio"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "新しいメッセージはありません"
           }
         },
-        "pt-BR": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Sem novas mensagens"
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sem novas mensagens"
           }
         }
       }
+    },
+    "No subscriptions" : {
+
     },
-    "No subscriptions yet": {
-      "localizations": {
-        "de": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Noch keine Abonnements"
+    "No subscriptions yet" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Noch keine Abonnements"
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Aucun abonnement"
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aún no hay suscripciones"
           }
         },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Aún no hay suscripciones"
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aucun abonnement"
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "サブスクリプションはまだありません"
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nessun abbonamento ancora"
           }
         },
-        "it": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Nessun abbonamento ancora"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "サブスクリプションはまだありません"
           }
         },
-        "pt-BR": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Sem inscrições ainda"
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sem inscrições ainda"
           }
         }
       }
     },
-    "ntfy Notifications": {
-      "localizations": {
-        "de": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "ntfy Benachrichtigungen"
+    "ntfy Notifications" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ntfy Benachrichtigungen"
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Notifications ntfy"
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Notificaciones de ntfy"
           }
         },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Notificaciones de ntfy"
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Notifications ntfy"
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "ntfy通知"
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Notifiche ntfy"
           }
         },
-        "it": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Notifiche ntfy"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ntfy通知"
           }
         },
-        "pt-BR": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Notificações ntfy"
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Notificações ntfy"
           }
         }
       }
     },
-    "ntfy on GitHub": {
-      "localizations": {
-        "de": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "ntfy auf GitHub"
+    "ntfy on GitHub" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ntfy auf GitHub"
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "ntfy sur GitHub"
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ntfy en GitHub"
           }
         },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "ntfy en GitHub"
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ntfy sur GitHub"
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "GitHubのntfy"
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ntfy su GitHub"
           }
         },
-        "it": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "ntfy su GitHub"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "GitHubのntfy"
           }
         },
-        "pt-BR": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "ntfy no GitHub"
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ntfy no GitHub"
           }
         }
       }
     },
-    "ntfy.sh": {},
-    "ntfyme": {},
-    "ntfyme History": {
-      "localizations": {
-        "de": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Verlauf"
+    "ntfy.sh" : {
+
+    },
+    "ntfyme" : {
+
+    },
+    "ntfyme History" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Verlauf"
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Historique ntfyme"
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Historial de ntfyme"
           }
         },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Historial de ntfyme"
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Historique ntfyme"
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "ntfyme履歴"
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cronologia ntfyme"
           }
         },
-        "it": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Cronologia ntfyme"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ntfyme履歴"
           }
         },
-        "pt-BR": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Histórico do ntfyme"
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Histórico do ntfyme"
           }
         }
       }
     },
-    "ntfyme is not affiliated with the ntfy project.": {
-      "localizations": {
-        "de": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "ntfyme steht in keiner Verbindung zum ntfy Projekt."
+    "ntfyme is not affiliated with the ntfy project." : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ntfyme steht in keiner Verbindung zum ntfy Projekt."
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "ntfyme n'est pas affilié au projet ntfy."
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ntfyme no está afiliado al proyecto ntfy."
           }
         },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "ntfyme no está afiliado al proyecto ntfy."
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ntfyme n'est pas affilié au projet ntfy."
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "ntfymeはntfyプロジェクトとは関係ありません。"
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ntfyme non è affiliato al progetto ntfy."
           }
         },
-        "it": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "ntfyme non è affiliato al progetto ntfy."
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ntfymeはntfyプロジェクトとは関係ありません。"
           }
         },
-        "pt-BR": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "O ntfyme não é afiliado ao projeto ntfy."
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "O ntfyme não é afiliado ao projeto ntfy."
           }
         }
       }
     },
-    "ntfyme needs to restart to switch languages.": {
-      "localizations": {
-        "de": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "ntfyme muss neu gestartet werden, um die Sprache zu wechseln."
+    "ntfyme needs to restart to switch languages." : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ntfyme muss neu gestartet werden, um die Sprache zu wechseln."
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "ntfyme doit redémarrer pour changer de langue."
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ntfyme debe reiniciarse para cambiar de idioma."
           }
         },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "ntfyme debe reiniciarse para cambiar de idioma."
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ntfyme doit redémarrer pour changer de langue."
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "言語を切り替えるにはntfymeの再起動が必要です。"
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ntfyme deve essere riavviato per cambiare lingua."
           }
         },
-        "it": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "ntfyme deve essere riavviato per cambiare lingua."
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "言語を切り替えるにはntfymeの再起動が必要です。"
           }
         },
-        "pt-BR": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "O ntfyme precisa reiniciar para trocar de idioma."
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "O ntfyme precisa reiniciar para trocar de idioma."
           }
         }
       }
     },
-    "ntfyme on GitHub": {
-      "localizations": {
-        "de": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "ntfyme auf GitHub"
+    "ntfyme on GitHub" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ntfyme auf GitHub"
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "ntfyme sur GitHub"
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ntfyme en GitHub"
           }
         },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "ntfyme en GitHub"
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ntfyme sur GitHub"
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "GitHubのntfyme"
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ntfyme su GitHub"
           }
         },
-        "it": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "ntfyme su GitHub"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "GitHubのntfyme"
           }
         },
-        "pt-BR": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "ntfyme no GitHub"
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ntfyme no GitHub"
           }
         }
       }
     },
-    "Open ntfyme automatically when you log in to your Mac.": {
-      "localizations": {
-        "de": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "ntfyme automatisch öffnen, wenn du dich an deinem Mac anmelden."
+    "Open ntfyme automatically when you log in to your Mac." : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ntfyme automatisch öffnen, wenn du dich an deinem Mac anmelden."
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Ouvrir ntfyme automatiquement quand vous vous connectez à votre Mac."
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Abrir ntfyme automáticamente al iniciar sesión en tu Mac."
           }
         },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Abrir ntfyme automáticamente al iniciar sesión en tu Mac."
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ouvrir ntfyme automatiquement quand vous vous connectez à votre Mac."
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Macにログインしたら自動的にntfymeを起動します。"
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Avvia ntfyme automaticamente all'accesso al tuo Mac."
           }
         },
-        "it": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Avvia ntfyme automaticamente all'accesso al tuo Mac."
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Macにログインしたら自動的にntfymeを起動します。"
           }
         },
-        "pt-BR": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Abrir o ntfyme automaticamente ao fazer login no seu Mac."
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Abrir o ntfyme automaticamente ao fazer login no seu Mac."
           }
         }
       }
     },
-    "Open View History to see past notifications.": {
-      "localizations": {
-        "de": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Öffne den Verlauf, um frühere Benachrichtigungen anzuzeigen."
+    "Open View History to see past notifications." : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Öffne den Verlauf, um frühere Benachrichtigungen anzuzeigen."
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Ouvrez Voir l'historique pour consulter les notifications passées."
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Abre Ver historial para consultar notificaciones anteriores."
           }
         },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Abre Ver historial para consultar notificaciones anteriores."
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ouvrez Voir l'historique pour consulter les notifications passées."
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "過去の通知を確認するには履歴を開いてください。"
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Apri Visualizza cronologia per vedere le notifiche passate."
           }
         },
-        "it": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Apri Visualizza cronologia per vedere le notifiche passate."
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "過去の通知を確認するには履歴を開いてください。"
           }
         },
-        "pt-BR": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Abra Ver histórico para conferir notificações anteriores."
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Abra Ver histórico para conferir notificações anteriores."
           }
         }
       }
     },
-    "Pause Notifications": {
-      "localizations": {
-        "de": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Benachrichtigungen pausieren"
+    "Pause Notifications" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Benachrichtigungen pausieren"
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Suspendre les notifications"
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pausar notificaciones"
           }
         },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Pausar notificaciones"
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Suspendre les notifications"
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "通知を一時停止"
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sospendi notifiche"
           }
         },
-        "it": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Sospendi notifiche"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "通知を一時停止"
           }
         },
-        "pt-BR": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Pausar notificações"
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pausar notificações"
           }
         }
       }
     },
-    "Play a preview of this sound": {
-      "localizations": {
-        "de": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Eine Vorschau dieses Sounds abspielen"
+    "Play a preview of this sound" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Eine Vorschau dieses Sounds abspielen"
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Écouter un aperçu de ce son"
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Reproducir una vista previa de este sonido"
           }
         },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Reproducir una vista previa de este sonido"
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Écouter un aperçu de ce son"
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "このサウンドのプレビューを再生"
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Riproduci un'anteprima di questo suono"
           }
         },
-        "it": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Riproduci un'anteprima di questo suono"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "このサウンドのプレビューを再生"
           }
         },
-        "pt-BR": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Reproduzir uma prévia deste som"
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Reproduzir uma prévia deste som"
           }
         }
       }
     },
-    "Play sound for new notifications": {
-      "localizations": {
-        "de": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Ton bei neuen Benachrichtigungen abspielen"
+    "Play sound for new notifications" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ton bei neuen Benachrichtigungen abspielen"
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Jouer un son pour les nouvelles notifications"
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Reproducir sonido para nuevas notificaciones"
           }
         },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Reproducir sonido para nuevas notificaciones"
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Jouer un son pour les nouvelles notifications"
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "新しい通知でサウンドを再生"
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Riproduci suono per nuove notifiche"
           }
         },
-        "it": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Riproduci suono per nuove notifiche"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "新しい通知でサウンドを再生"
           }
         },
-        "pt-BR": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Tocar som para novas notificações"
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tocar som para novas notificações"
           }
         }
       }
     },
-    "Played for messages with priority High (4) or Max (5). Lower priorities use the sound chosen above.": {
-      "localizations": {
-        "de": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Wird bei Nachrichten mit der Priorität „Hoch“ (4) oder „Max“ (5) abgespielt. Bei niedrigeren Prioritäten wird der oben ausgewählte Ton verwendet."
+    "Played for messages with priority High (4) or Max (5). Lower priorities use the sound chosen above." : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wird bei Nachrichten mit der Priorität „Hoch“ (4) oder „Max“ (5) abgespielt. Bei niedrigeren Prioritäten wird der oben ausgewählte Ton verwendet."
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Joué pour les messages de priorité Élevée (4) ou Maximale (5). Les priorités inférieures utilisent le son choisi ci-dessus."
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Se reproduce para los mensajes con prioridad Alta (4) o Máxima (5). Las prioridades inferiores usan el sonido elegido arriba."
           }
         },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Se reproduce para los mensajes con prioridad Alta (4) o Máxima (5). Las prioridades inferiores usan el sonido elegido arriba."
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Joué pour les messages de priorité Élevée (4) ou Maximale (5). Les priorités inférieures utilisent le son choisi ci-dessus."
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "高(4)または最大(5)優先度のメッセージで再生されます。それ以下の優先度では上記で選択したサウンドが使用されます。"
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Riprodotto per i messaggi con priorità Alta (4) o Massima (5). Le priorità inferiori usano il suono scelto sopra."
           }
         },
-        "it": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Riprodotto per i messaggi con priorità Alta (4) o Massima (5). Le priorità inferiori usano il suono scelto sopra."
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "高(4)または最大(5)優先度のメッセージで再生されます。それ以下の優先度では上記で選択したサウンドが使用されます。"
           }
         },
-        "pt-BR": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Tocado para mensagens com prioridade Alta (4) ou Máxima (5). Prioridades menores usam o som escolhido acima."
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tocado para mensagens com prioridade Alta (4) ou Máxima (5). Prioridades menores usam o som escolhido acima."
           }
         }
       }
     },
-    "Preview": {
-      "localizations": {
-        "de": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Vorschau"
+    "Preview" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vorschau"
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Aperçu"
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vista previa"
           }
         },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Vista previa"
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aperçu"
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "プレビュー"
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Anteprima"
           }
         },
-        "it": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Anteprima"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "プレビュー"
           }
         },
-        "pt-BR": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Prévia"
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Prévia"
           }
         }
       }
     },
-    "Quit ntfyme": {
-      "localizations": {
-        "de": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "ntfyme Beenden"
+    "Quit ntfyme" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ntfyme Beenden"
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Quitter ntfyme"
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Salir de ntfyme"
           }
         },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Salir de ntfyme"
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Quitter ntfyme"
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "ntfymeを終了"
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Esci da ntfyme"
           }
         },
-        "it": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Esci da ntfyme"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ntfymeを終了"
           }
         },
-        "pt-BR": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Sair do ntfyme"
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sair do ntfyme"
           }
         }
       }
     },
-    "Remove": {
-      "localizations": {
-        "de": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Entfernen"
+    "Reconnecting…" : {
+
+    },
+    "Remove" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Entfernen"
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Supprimer"
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Eliminar"
           }
         },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Eliminar"
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Supprimer"
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "削除"
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rimuovi"
           }
         },
-        "it": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Rimuovi"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "削除"
           }
         },
-        "pt-BR": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Remover"
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Remover"
           }
         }
       }
     },
-    "Restart Now": {
-      "localizations": {
-        "de": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Jetzt neu starten"
+    "Restart Now" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Jetzt neu starten"
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Redémarrer maintenant"
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Reiniciar ahora"
           }
         },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Reiniciar ahora"
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Redémarrer maintenant"
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "今すぐ再起動"
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Riavvia ora"
           }
         },
-        "it": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Riavvia ora"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "今すぐ再起動"
           }
         },
-        "pt-BR": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Reiniciar agora"
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Reiniciar agora"
           }
         }
       }
     },
-    "Restart ntfyme to apply a new language.": {
-      "localizations": {
-        "de": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Starte ntfyme neu, um die neue Sprache zu übernehmen."
+    "Restart ntfyme to apply a new language." : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Starte ntfyme neu, um die neue Sprache zu übernehmen."
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Redémarrez ntfyme pour appliquer une nouvelle langue."
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Reinicia ntfyme para aplicar un nuevo idioma."
           }
         },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Reinicia ntfyme para aplicar un nuevo idioma."
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Redémarrez ntfyme pour appliquer une nouvelle langue."
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "新しい言語を適用するにはntfymeを再起動してください。"
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Riavvia ntfyme per applicare una nuova lingua."
           }
         },
-        "it": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Riavvia ntfyme per applicare una nuova lingua."
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "新しい言語を適用するにはntfymeを再起動してください。"
           }
         },
-        "pt-BR": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Reinicie o ntfyme para aplicar um novo idioma."
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Reinicie o ntfyme para aplicar um novo idioma."
           }
         }
       }
     },
-    "Resume Notifications": {
-      "localizations": {
-        "de": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Benachrichtigungen fortsetzen"
+    "Resume Notifications" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Benachrichtigungen fortsetzen"
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Reprendre les notifications"
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Reanudar notificaciones"
           }
         },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Reanudar notificaciones"
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Reprendre les notifications"
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "通知を再開"
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Riprendi notifiche"
           }
         },
-        "it": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Riprendi notifiche"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "通知を再開"
           }
         },
-        "pt-BR": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Retomar notificações"
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Retomar notificações"
           }
         }
       }
     },
-    "Save": {
-      "localizations": {
-        "de": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Speichern"
+    "Save" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Speichern"
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Enregistrer"
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Guardar"
           }
         },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Guardar"
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Enregistrer"
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "保存"
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Salva"
           }
         },
-        "it": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Salva"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "保存"
           }
         },
-        "pt-BR": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Salvar"
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Salvar"
           }
         }
       }
     },
-    "Search messages": {
-      "localizations": {
-        "de": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Nachrichten suchen"
+    "Search messages" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nachrichten suchen"
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Rechercher des messages"
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Buscar mensajes"
           }
         },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Buscar mensajes"
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rechercher des messages"
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "メッセージを検索"
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cerca messaggi"
           }
         },
-        "it": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Cerca messaggi"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "メッセージを検索"
           }
         },
-        "pt-BR": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Pesquisar mensagens"
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pesquisar mensagens"
           }
         }
       }
     },
-    "Send a test notification to the selected topic": {
-      "localizations": {
-        "de": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Sende eine Testbenachrichtigung an das ausgewählte Thema"
+    "Send a test notification to the selected topic" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sende eine Testbenachrichtigung an das ausgewählte Thema"
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Envoyer une notification test au sujet sélectionné"
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Enviar una notificación de prueba al tema seleccionado"
           }
         },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Enviar una notificación de prueba al tema seleccionado"
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Envoyer une notification test au sujet sélectionné"
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "選択したトピックにテスト通知を送信"
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Invia una notifica di prova all'argomento selezionato"
           }
         },
-        "it": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Invia una notifica di prova all'argomento selezionato"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "選択したトピックにテスト通知を送信"
           }
         },
-        "pt-BR": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Enviar uma notificação de teste para o tópico selecionado"
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Enviar uma notificação de teste para o tópico selecionado"
           }
         }
       }
     },
-    "Send test message": {
-      "localizations": {
-        "de": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Testnachricht senden"
+    "Send test message" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Testnachricht senden"
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Envoyer un message test"
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Enviar mensaje de prueba"
           }
         },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Enviar mensaje de prueba"
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Envoyer un message test"
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "テストメッセージを送信"
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Invia messaggio di prova"
           }
         },
-        "it": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Invia messaggio di prova"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "テストメッセージを送信"
           }
         },
-        "pt-BR": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Enviar mensagem de teste"
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Enviar mensagem de teste"
           }
         }
       }
     },
-    "Server": {
-      "localizations": {
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Serveur"
+    "Server" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Servidor"
           }
         },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Servidor"
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Serveur"
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "サーバー"
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Server"
           }
         },
-        "it": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Server"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "サーバー"
           }
         },
-        "pt-BR": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Servidor"
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Servidor"
           }
         }
       }
     },
-    "Settings…": {
-      "localizations": {
-        "de": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Einstellungen…"
+    "Settings…" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Einstellungen…"
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Réglages…"
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ajustes…"
           }
         },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Ajustes…"
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Réglages…"
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "設定…"
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Impostazioni…"
           }
         },
-        "it": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Impostazioni…"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "設定…"
           }
         },
-        "pt-BR": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Configurações…"
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Configurações…"
           }
         }
       }
     },
-    "Shown next to messages from this topic in the popup and history. Choose “Automatic” to derive the look from message tags.": {
-      "localizations": {
-        "de": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Wird neben Beiträgen zu diesem Thema im Popup-Fenster und im Verlauf angezeigt. Wähle „Automatisch“, um das Erscheinungsbild anhand der Beitrags-Tags anzupassen."
+    "Shown next to messages from this topic in the popup and history. Choose “Automatic” to derive the look from message tags." : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wird neben Beiträgen zu diesem Thema im Popup-Fenster und im Verlauf angezeigt. Wähle „Automatisch“, um das Erscheinungsbild anhand der Beitrags-Tags anzupassen."
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Affiché à côté des messages de ce sujet dans la fenêtre contextuelle et l'historique. Choisissez « Automatique » pour dériver l'apparence des étiquettes du message."
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Se muestra junto a los mensajes de este tema en la ventana emergente y el historial. Elige «Automático» para derivar el aspecto de las etiquetas del mensaje."
           }
         },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Se muestra junto a los mensajes de este tema en la ventana emergente y el historial. Elige «Automático» para derivar el aspecto de las etiquetas del mensaje."
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Affiché à côté des messages de ce sujet dans la fenêtre contextuelle et l'historique. Choisissez « Automatique » pour dériver l'apparence des étiquettes du message."
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "ポップアップと履歴のこのトピックのメッセージの横に表示されます。「自動」を選択するとメッセージタグから外観が導き出されます。"
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mostrato accanto ai messaggi di questo argomento nel popup e nella cronologia. Scegli «Automatico» per derivare l'aspetto dai tag del messaggio."
           }
         },
-        "it": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Mostrato accanto ai messaggi di questo argomento nel popup e nella cronologia. Scegli «Automatico» per derivare l'aspetto dai tag del messaggio."
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ポップアップと履歴のこのトピックのメッセージの横に表示されます。「自動」を選択するとメッセージタグから外観が導き出されます。"
           }
         },
-        "pt-BR": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Mostrado ao lado das mensagens deste tópico no popup e no histórico. Escolha «Automático» para derivar a aparência das tags da mensagem."
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mostrado ao lado das mensagens deste tópico no popup e no histórico. Escolha «Automático» para derivar a aparência das tags da mensagem."
           }
         }
       }
     },
-    "Sound": {
-      "localizations": {
-        "de": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Ton"
+    "Sound" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ton"
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Son"
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sonido"
           }
         },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Sonido"
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Son"
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "サウンド"
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Suono"
           }
         },
-        "it": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Suono"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "サウンド"
           }
         },
-        "pt-BR": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Som"
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Som"
           }
         }
       }
     },
-    "Startup": {
-      "localizations": {
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Démarrage"
+    "Startup" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Inicio"
           }
         },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Inicio"
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Démarrage"
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "起動"
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Avvio"
           }
         },
-        "it": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Avvio"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "起動"
           }
         },
-        "pt-BR": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Inicialização"
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Inicialização"
           }
         }
       }
     },
-    "Subscribe": {
-      "localizations": {
-        "de": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Abonnieren"
+    "Subscribe" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Abonnieren"
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "S'abonner"
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Suscribirse"
           }
         },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Suscribirse"
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "S'abonner"
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "サブスクライブ"
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Abbonati"
           }
         },
-        "it": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Abbonati"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "サブスクライブ"
           }
         },
-        "pt-BR": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Inscrever-se"
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Inscrever-se"
           }
         }
       }
     },
-    "Subscribe to a new topic": {
-      "localizations": {
-        "de": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Ein neues Thema abonnieren"
+    "Subscribe to a new topic" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ein neues Thema abonnieren"
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "S'abonner à un nouveau sujet"
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Suscribirse a un nuevo tema"
           }
         },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Suscribirse a un nuevo tema"
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "S'abonner à un nouveau sujet"
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "新しいトピックにサブスクライブ"
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Abbonati a un nuovo argomento"
           }
         },
-        "it": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Abbonati a un nuovo argomento"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "新しいトピックにサブスクライブ"
           }
         },
-        "pt-BR": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Inscrever-se em um novo tópico"
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Inscrever-se em um novo tópico"
           }
         }
       }
     },
-    "Subscribe to a topic": {
-      "localizations": {
-        "de": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Ein Thema abonnieren"
+    "Subscribe to a topic" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ein Thema abonnieren"
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "S'abonner à un sujet"
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Suscribirse a un tema"
           }
         },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Suscribirse a un tema"
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "S'abonner à un sujet"
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "トピックにサブスクライブ"
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Abbonati a un argomento"
           }
         },
-        "it": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Abbonati a un argomento"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "トピックにサブスクライブ"
           }
         },
-        "pt-BR": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Inscrever-se em um tópico"
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Inscrever-se em um tópico"
           }
         }
       }
     },
-    "Subscriptions": {
-      "localizations": {
-        "de": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Abonnements"
+    "Subscriptions" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Abonnements"
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Abonnements"
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Suscripciones"
           }
         },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Suscripciones"
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Abonnements"
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "サブスクリプション"
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Abbonamenti"
           }
         },
-        "it": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Abbonamenti"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "サブスクリプション"
           }
         },
-        "pt-BR": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Inscrições"
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Inscrições"
           }
         }
       }
     },
-    "System default": {
-      "localizations": {
-        "de": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Systemstandard"
+    "System default" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Systemstandard"
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Système par défaut"
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Predeterminado del sistema"
           }
         },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Predeterminado del sistema"
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Système par défaut"
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "システムデフォルト"
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Predefinito di sistema"
           }
         },
-        "it": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Predefinito di sistema"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "システムデフォルト"
           }
         },
-        "pt-BR": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Padrão do sistema"
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Padrão do sistema"
           }
         }
       }
+    },
+    "toepper.rocks" : {
+
     },
-    "toepper.rocks": {},
-    "Topic": {
-      "localizations": {
-        "de": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Thema"
+    "Topic" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Thema"
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Sujet"
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tema"
           }
         },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Tema"
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sujet"
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "トピック"
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Argomento"
           }
         },
-        "it": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Argomento"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "トピック"
           }
         },
-        "pt-BR": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Tópico"
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tópico"
           }
         }
       }
     },
-    "Unsubscribe": {
-      "extractionState": "stale",
-      "localizations": {
-        "de": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Abbestellen"
+    "Unsubscribe" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Abbestellen"
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Se désabonner"
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cancelar suscripción"
           }
         },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Cancelar suscripción"
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Se désabonner"
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "サブスクリプション解除"
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Annulla abbonamento"
           }
         },
-        "it": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Annulla abbonamento"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "サブスクリプション解除"
           }
         },
-        "pt-BR": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Cancelar inscrição"
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cancelar inscrição"
           }
         }
       }
     },
-    "Unsubscribe from the selected topic": {
-      "localizations": {
-        "de": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Das ausgewählte Thema abbestellen"
+    "Unsubscribe from the selected topic" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Das ausgewählte Thema abbestellen"
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Se désabonner du sujet sélectionné"
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cancelar suscripción al tema seleccionado"
           }
         },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Cancelar suscripción al tema seleccionado"
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Se désabonner du sujet sélectionné"
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "選択したトピックのサブスクリプションを解除"
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Annulla l'abbonamento all'argomento selezionato"
           }
         },
-        "it": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Annulla l'abbonamento all'argomento selezionato"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "選択したトピックのサブスクリプションを解除"
           }
         },
-        "pt-BR": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Cancelar a inscrição do tópico selecionado"
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cancelar a inscrição do tópico selecionado"
           }
         }
       }
     },
-    "Use a different server for this topic": {
-      "localizations": {
-        "de": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Verwende für dieses Thema einen anderen Server"
+    "Use a different server for this topic" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Verwende für dieses Thema einen anderen Server"
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Utiliser un serveur différent pour ce sujet"
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Usar un servidor diferente para este tema"
           }
         },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Usar un servidor diferente para este tema"
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Utiliser un serveur différent pour ce sujet"
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "このトピックに別のサーバーを使用"
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Usa un server diverso per questo argomento"
           }
         },
-        "it": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Usa un server diverso per questo argomento"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "このトピックに別のサーバーを使用"
           }
         },
-        "pt-BR": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Usar um servidor diferente para este tópico"
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Usar um servidor diferente para este tópico"
           }
         }
       }
     },
-    "Use a different sound for high-priority messages": {
-      "localizations": {
-        "de": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Verwende einen anderen Ton für Nachrichten mit hoher Priorität"
+    "Use a different sound for high-priority messages" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Verwende einen anderen Ton für Nachrichten mit hoher Priorität"
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Utiliser un son différent pour les messages prioritaires"
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Usar un sonido diferente para mensajes de alta prioridad"
           }
         },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Usar un sonido diferente para mensajes de alta prioridad"
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Utiliser un son différent pour les messages prioritaires"
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "高優先度のメッセージに別のサウンドを使用"
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Usa un suono diverso per i messaggi ad alta priorità"
           }
         },
-        "it": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Usa un suono diverso per i messaggi ad alta priorità"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "高優先度のメッセージに別のサウンドを使用"
           }
         },
-        "pt-BR": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Usar um som diferente para mensagens de alta prioridade"
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Usar um som diferente para mensagens de alta prioridade"
           }
         }
       }
     },
-    "Used for any subscription that doesn't override the server. Include scheme (https://).": {
-      "localizations": {
-        "de": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Wird für alle Abonnements verwendet, die den Server nicht überschreiben. Schema einbeziehen (https://)."
+    "Used for any subscription that doesn't override the server. Include scheme (https://)." : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wird für alle Abonnements verwendet, die den Server nicht überschreiben. Schema einbeziehen (https://)."
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Utilisé pour tout abonnement qui ne remplace pas le serveur. Incluez le schéma (https://)."
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Se usa para cualquier suscripción que no anule el servidor. Incluye el esquema (https://)."
           }
         },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Se usa para cualquier suscripción que no anule el servidor. Incluye el esquema (https://)."
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Utilisé pour tout abonnement qui ne remplace pas le serveur. Incluez le schéma (https://)."
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "サーバーを上書きしないサブスクリプションに使用されます。スキーム(https://)を含めてください。"
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Usato per qualsiasi abbonamento che non sostituisce il server. Includi lo schema (https://)."
           }
         },
-        "it": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Usato per qualsiasi abbonamento che non sostituisce il server. Includi lo schema (https://)."
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "サーバーを上書きしないサブスクリプションに使用されます。スキーム(https://)を含めてください。"
           }
         },
-        "pt-BR": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Usado para qualquer inscrição que não substitua o servidor. Inclua o esquema (https://)."
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Usado para qualquer inscrição que não substitua o servidor. Inclua o esquema (https://)."
           }
         }
       }
     },
-    "Used for protected topics. Sent as Bearer token.": {
-      "localizations": {
-        "de": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Wird für geschützte Themen verwendet. Wird als Bearer-Token gesendet."
+    "Used for protected topics. Sent as Bearer token." : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wird für geschützte Themen verwendet. Wird als Bearer-Token gesendet."
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Utilisé pour les sujets protégés. Envoyé comme jeton Bearer."
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Se usa para temas protegidos. Se envía como token Bearer."
           }
         },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Se usa para temas protegidos. Se envía como token Bearer."
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Utilisé pour les sujets protégés. Envoyé comme jeton Bearer."
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "保護されたトピックで使用されます。Bearerトークンとして送信されます。"
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Usato per argomenti protetti. Inviato come token Bearer."
           }
         },
-        "it": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Usato per argomenti protetti. Inviato come token Bearer."
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "保護されたトピックで使用されます。Bearerトークンとして送信されます。"
           }
         },
-        "pt-BR": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Usado para tópicos protegidos. Enviado como token Bearer."
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Usado para tópicos protegidos. Enviado como token Bearer."
           }
         }
       }
     },
-    "View History": {
-      "localizations": {
-        "de": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Verlauf anzeigen"
+    "View History" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Verlauf anzeigen"
           }
         },
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Voir l'historique"
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ver historial"
           }
         },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Ver historial"
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Voir l'historique"
           }
         },
-        "ja": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "履歴を表示"
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Visualizza cronologia"
           }
         },
-        "it": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Visualizza cronologia"
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "履歴を表示"
           }
         },
-        "pt-BR": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Ver histórico"
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ver histórico"
           }
         }
       }
     }
   },
-  "version": "1.0"
+  "version" : "1.0"
 }

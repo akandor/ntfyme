@@ -86,6 +86,21 @@ final class Store: ObservableObject {
         "Morse", "Ping", "Pop", "Purr", "Sosumi", "Submarine", "Tink"
     ]
 
+    enum ConnectionState: Sendable {
+        case connecting
+        case connected
+        case disconnected
+    }
+
+    @Published private(set) var connectionStates: [UUID: ConnectionState] = [:]
+
+    // Live in-session tracker of the most recent message id we've seen
+    // per subscription, used to build `?since=` on reconnect. At startup
+    // it's seeded from the persisted `messages` array, so a Mac that
+    // slept overnight and woke up still asks the server for everything
+    // newer than the last thing it saw.
+    private var lastSeenMessageIDs: [UUID: String] = [:]
+
     private var tasks: [UUID: Task<Void, Never>] = [:]
     private let messagesLimit = 200
 
@@ -111,6 +126,7 @@ final class Store: ObservableObject {
         self.highPrioritySoundName = defaults.string(forKey: Keys.highPrioritySoundName) ?? "Hero"
         self.launchAtLogin = SMAppService.mainApp.status == .enabled
         self.language = defaults.string(forKey: Keys.language) ?? "system"
+
         if let data = defaults.data(forKey: Keys.subscriptions),
            let decoded = try? JSONDecoder().decode([Subscription].self, from: data) {
             self.subscriptions = decoded
@@ -119,11 +135,36 @@ final class Store: ObservableObject {
            let decoded = try? JSONDecoder().decode([NtfyMessage].self, from: data) {
             self.messages = decoded
         }
+
+        // Seed `lastSeenMessageIDs` from the persisted `messages` array
+        // — the messages array is the source of truth for "what have we
+        // already seen for this subscription", and is reliably persisted
+        // via the @Published didSet. Derive the since-id from it on
+        // launch instead of maintaining a second persisted dict.
+        // Messages are stored newest-first, so the first match per
+        // subscription is the newest.
+        for msg in self.messages {
+            if let subID = msg.subscriptionID, self.lastSeenMessageIDs[subID] == nil {
+                self.lastSeenMessageIDs[subID] = msg.id
+            }
+        }
     }
 
     // MARK: - Public API
 
     var unreadCount: Int { messages.lazy.filter { !$0.read }.count }
+
+    enum AggregateConnection: Sendable {
+        case none, allConnected, partial, allDisconnected
+    }
+
+    var aggregateConnection: AggregateConnection {
+        guard !subscriptions.isEmpty else { return .none }
+        let connected = subscriptions.lazy.filter { self.connectionStates[$0.id] == .connected }.count
+        if connected == subscriptions.count { return .allConnected }
+        if connected == 0 { return .allDisconnected }
+        return .partial
+    }
 
     func messages(for subscriptionID: UUID) -> [NtfyMessage] {
         messages.filter { $0.subscriptionID == subscriptionID }
@@ -145,6 +186,8 @@ final class Store: ObservableObject {
         tasks.removeValue(forKey: sub.id)
         subscriptions.removeAll { $0.id == sub.id }
         messages.removeAll { $0.subscriptionID == sub.id }
+        connectionStates.removeValue(forKey: sub.id)
+        lastSeenMessageIDs.removeValue(forKey: sub.id)
     }
 
     func markAllRead() {
@@ -227,6 +270,8 @@ final class Store: ObservableObject {
         let topic = sub.topic
         let serverOverride = sub.serverURL
         let token = sub.token
+        let initialSince = lastSeenMessageIDs[sub.id]
+        connectionStates[sub.id] = .connecting
         tasks[sub.id] = Task { [weak self] in
             await Self.streamLoop(
                 subID: subID,
@@ -234,8 +279,17 @@ final class Store: ObservableObject {
                 serverOverride: serverOverride,
                 defaultServer: serverDefault,
                 token: token,
+                initialSince: initialSince,
                 onMessage: { msg in
                     Task { @MainActor [weak self] in self?.receive(msg, subID: subID) }
+                },
+                onState: { state in
+                    Task { @MainActor [weak self] in
+                        guard let self else { return }
+                        if self.subscriptions.contains(where: { $0.id == subID }) {
+                            self.connectionStates[subID] = state
+                        }
+                    }
                 }
             )
         }
@@ -246,15 +300,19 @@ final class Store: ObservableObject {
         var tagged = msg
         tagged.subscriptionID = subID
         tagged.read = false
+        let isNew: Bool
         if let idx = messages.firstIndex(where: { $0.id == tagged.id }) {
             messages[idx] = tagged
+            isNew = false
         } else {
             messages.insert(tagged, at: 0)
             if messages.count > messagesLimit {
                 messages.removeLast(messages.count - messagesLimit)
             }
+            isNew = true
         }
-        if !notificationsPaused {
+        lastSeenMessageIDs[subID] = tagged.id
+        if isNew, !notificationsPaused {
             NotificationService.shared.deliver(tagged)
         }
     }
@@ -265,39 +323,60 @@ final class Store: ObservableObject {
         serverOverride: String?,
         defaultServer: String,
         token: String?,
-        onMessage: @Sendable @escaping (NtfyMessage) -> Void
+        initialSince: String?,
+        onMessage: @Sendable @escaping (NtfyMessage) -> Void,
+        onState: @Sendable @escaping (ConnectionState) -> Void
     ) async {
         var backoff: UInt64 = 1_000_000_000
         let maxBackoff: UInt64 = 30_000_000_000
 
+        // We track the most recently received message ID inside the loop
+        // and pass it back to the server on every reconnect as `?since=`,
+        // so messages posted while we were asleep or offline backfill on
+        // the way back in. Starts from whatever was persisted last
+        // session.
+        var sinceID: String? = initialSince
+
         while !Task.isCancelled {
             let sub = Subscription(id: subID, topic: topic, serverURL: serverOverride, token: token)
-            guard let url = sub.streamURL(default: defaultServer) else {
+            guard let baseURL = sub.streamURL(default: defaultServer) else {
                 try? await Task.sleep(nanoseconds: maxBackoff)
                 continue
             }
+            let url: URL = {
+                guard let since = sinceID,
+                      var components = URLComponents(url: baseURL, resolvingAgainstBaseURL: false) else {
+                    return baseURL
+                }
+                components.queryItems = [URLQueryItem(name: "since", value: since)]
+                return components.url ?? baseURL
+            }()
             var req = URLRequest(url: url)
             req.timeoutInterval = .infinity
             if let token, !token.isEmpty {
                 req.setValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
             }
+            onState(.connecting)
             do {
                 let (bytes, response) = try await URLSession.shared.bytes(for: req)
                 if let http = response as? HTTPURLResponse, http.statusCode != 200 {
                     throw URLError(.badServerResponse)
                 }
+                onState(.connected)
                 backoff = 1_000_000_000
                 for try await line in bytes.lines {
                     if Task.isCancelled { break }
                     guard !line.isEmpty, let data = line.data(using: .utf8) else { continue }
                     guard let msg = try? JSONDecoder().decode(NtfyMessage.self, from: data) else { continue }
                     if msg.event == nil || msg.event == "message" {
+                        sinceID = msg.id
                         onMessage(msg)
                     }
                 }
             } catch {
                 // fall through to backoff/reconnect
             }
+            onState(.disconnected)
             if Task.isCancelled { break }
             try? await Task.sleep(nanoseconds: backoff)
             backoff = min(backoff * 2, maxBackoff)

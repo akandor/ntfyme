@@ -1,17 +1,75 @@
 import SwiftUI
 import AppKit
 
-struct SettingsView: View {
+struct MainWindowView: View {
+    @AppStorage(MainWindowTab.storageKey) private var selectedTab: String = MainWindowTab.general.rawValue
+
     var body: some View {
-        TabView {
+        TabView(selection: $selectedTab) {
             GeneralSettingsView()
                 .tabItem { Label("General", systemImage: "gearshape") }
+                .tag(MainWindowTab.general.rawValue)
             SubscriptionsSettingsView()
                 .tabItem { Label("Subscriptions", systemImage: "bell") }
+                .tag(MainWindowTab.subscriptions.rawValue)
+            HistoryView()
+                .tabItem { Label("History", systemImage: "clock.arrow.circlepath") }
+                .tag(MainWindowTab.history.rawValue)
             AboutSettingsView()
                 .tabItem { Label("About", systemImage: "info.circle") }
+                .tag(MainWindowTab.about.rawValue)
         }
-        .frame(width: 540, height: 460)
+        .frame(minWidth: 720, minHeight: 480)
+        // The app is launched with LSUIElement (agent, no Dock icon). When
+        // the main window opens we flip the activation policy to .regular
+        // so it gets a Dock icon, the application menu bar, and Cmd-Tab
+        // visibility. When it disappears we go back to .accessory so
+        // ntfyme drops out of the Dock again.
+        .onAppear {
+            // Promote to .regular first so the Dock registers a tile
+            // for us, then push the icon image after a tick. The Dock
+            // ignores applicationIconImage writes that happen before a
+            // newly-promoted LSUIElement is in its tile list, which is
+            // why the bare assignment in onAppear used to land blank.
+            NSApp.setActivationPolicy(.regular)
+            NSApp.activate(ignoringOtherApps: true)
+            DispatchQueue.main.async {
+                if let icon = Self.resolveAppIcon() {
+                    NSApp.applicationIconImage = icon
+                }
+            }
+        }
+        .onDisappear {
+            NSApp.setActivationPolicy(.accessory)
+        }
+    }
+
+    static func resolveAppIcon() -> NSImage? {
+        AppIconResolver.resolve()
+    }
+}
+
+// Try a few sources for the app icon. The Icon Composer .icon file
+// compiles into Assets.car as a layered Tahoe icon, which the Dock
+// sometimes refuses to flatten when the app was launched as an
+// agent. The legacy AppIcon.icns also lives in Resources/, and
+// NSWorkspace is a third independent path that goes through
+// IconServices. Whichever one returns a non-empty NSImage first wins.
+enum AppIconResolver {
+    static func resolve() -> NSImage? {
+        if let path = Bundle.main.path(forResource: "AppIcon", ofType: "icns"),
+           let img = NSImage(contentsOfFile: path),
+           img.size != .zero {
+            return img
+        }
+        let workspaceIcon = NSWorkspace.shared.icon(forFile: Bundle.main.bundlePath)
+        if workspaceIcon.size != .zero {
+            return workspaceIcon
+        }
+        if let img = NSImage(named: "AppIcon") {
+            return img
+        }
+        return nil
     }
 }
 
@@ -141,6 +199,23 @@ struct GeneralSettingsView: View {
                     .font(.caption)
                     .foregroundStyle(.secondary)
             }
+
+            Section {
+                Button {
+                    Self.openNotificationSettings()
+                } label: {
+                    HStack {
+                        Image(systemName: "bell.badge.slash")
+                        Text("Open notification settings")
+                    }
+                }
+            } header: {
+                Text("Notification icon")
+            } footer: {
+                Text("If the notification banners or the entry in System Settings → Notifications show a blank icon, open the notification settings, find ntfyme, and toggle Allow Notifications off and back on. The system re-caches the app's icon at that moment.")
+                    .font(.caption)
+                    .foregroundStyle(.secondary)
+            }
         }
         .formStyle(.grouped)
         .padding()
@@ -158,6 +233,24 @@ struct GeneralSettingsView: View {
             Button("Later", role: .cancel) { languageAtAppear = store.language }
         } message: {
             Text("ntfyme needs to restart to switch languages.")
+        }
+    }
+
+    private static func openNotificationSettings() {
+        // Deep-link to System Settings → Notifications. macOS 13+
+        // accepts this URL scheme; the per-app anchor below it works
+        // on most Tahoe builds but silently falls through to the
+        // section header on others, which is still where the user
+        // needs to be.
+        let urls = [
+            "x-apple.systempreferences:com.apple.Notifications-Settings.extension?id=com.toepper.rocks.ntfyme",
+            "x-apple.systempreferences:com.apple.preference.notifications?id=com.toepper.rocks.ntfyme",
+            "x-apple.systempreferences:com.apple.preference.notifications"
+        ]
+        for raw in urls {
+            if let url = URL(string: raw), NSWorkspace.shared.open(url) {
+                return
+            }
         }
     }
 
@@ -195,6 +288,19 @@ struct SubscriptionsSettingsView: View {
                 ForEach(store.subscriptions) { sub in
                     SubscriptionRow(sub: sub, defaultServer: store.defaultServer)
                         .tag(sub.id)
+                        // Use an AppKit NSClickGestureRecognizer overlay
+                        // (rather than SwiftUI's TapGesture) so single
+                        // clicks pass straight through to NSTableView's
+                        // selection logic, matching Finder/Mail.app
+                        // behavior. SwiftUI's TapGesture(count:) blocks
+                        // single clicks while waiting to recognize a
+                        // double-click; NSClickGestureRecognizer with
+                        // delaysPrimaryMouseButtonEvents = false does
+                        // not.
+                        .overlay(
+                            DoubleClickCatcher { editing = sub }
+                                .allowsHitTesting(true)
+                        )
                         .contextMenu {
                             Button("Edit…") { editing = sub }
                             Button("Send test message") { store.sendTestMessage(sub) }
@@ -662,7 +768,44 @@ struct AboutSettingsView: View {
     }
 }
 
+// MARK: - Double-click recognizer
+
+// An AppKit NSClickGestureRecognizer wrapped as a SwiftUI view.
+// Used to add Mail.app-style double-click without stealing single-click
+// selection from the host List. delaysPrimaryMouseButtonEvents = false
+// lets the underlying NSTableView keep processing single clicks while
+// this recognizer waits for a possible second click.
+private struct DoubleClickCatcher: NSViewRepresentable {
+    let action: () -> Void
+
+    func makeCoordinator() -> Coordinator {
+        Coordinator(action: action)
+    }
+
+    func makeNSView(context: Context) -> NSView {
+        let view = NSView()
+        let recognizer = NSClickGestureRecognizer(
+            target: context.coordinator,
+            action: #selector(Coordinator.handle(_:))
+        )
+        recognizer.numberOfClicksRequired = 2
+        recognizer.delaysPrimaryMouseButtonEvents = false
+        view.addGestureRecognizer(recognizer)
+        return view
+    }
+
+    func updateNSView(_ nsView: NSView, context: Context) {
+        context.coordinator.action = action
+    }
+
+    final class Coordinator: NSObject {
+        var action: () -> Void
+        init(action: @escaping () -> Void) { self.action = action }
+        @objc func handle(_ sender: NSClickGestureRecognizer) { action() }
+    }
+}
+
 #Preview {
-    SettingsView()
+    MainWindowView()
         .environmentObject(Store.shared)
 }
