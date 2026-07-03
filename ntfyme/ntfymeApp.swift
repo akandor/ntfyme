@@ -13,6 +13,20 @@ struct ntfymeApp: App {
         let saved = UserDefaults.standard.string(forKey: "language") ?? "system"
         Store.applyLanguageOverride(saved)
 
+        // Keep the process alive. As a menu-bar agent (LSUIElement) with
+        // no windows most of the time, ntfyme is a prime candidate for
+        // macOS's Automatic Termination optimization, which silently
+        // kills idle backgrounded apps to save memory — including
+        // during sleep. The logs (com.apple.AppKit:AutomaticTermination
+        // flipping WouldBeTerminatedByTAL to 1) show that's exactly
+        // what was happening: the app was gone on wake with no crash
+        // report. Explicitly opting out here keeps the stream tasks
+        // alive across sleep/wake so nothing gets missed.
+        ProcessInfo.processInfo.disableAutomaticTermination(
+            "ntfyme keeps a persistent notification stream open"
+        )
+        ProcessInfo.processInfo.disableSuddenTermination()
+
         // Hand AppKit the bundle icon BEFORE we trigger the notification
         // authorization prompt. The user-notifications subsystem
         // snapshots the bundle's icon at first authorization and reuses

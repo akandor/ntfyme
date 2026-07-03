@@ -1181,6 +1181,9 @@
         }
       }
     },
+    "If the notification banners or the entry in System Settings → Notifications show a blank icon, open the notification settings, find ntfyme, and toggle Allow Notifications off and back on. The system re-caches the app's icon at that moment." : {
+
+    },
     "Language" : {
       "localizations" : {
         "de" : {
@@ -1704,6 +1707,9 @@
         }
       }
     },
+    "Notification icon" : {
+
+    },
     "ntfy Notifications" : {
       "localizations" : {
         "de" : {
@@ -1950,6 +1956,9 @@
           }
         }
       }
+    },
+    "Open notification settings" : {
+
     },
     "Open ntfyme automatically when you log in to your Mac." : {
       "localizations" : {
