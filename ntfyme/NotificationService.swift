@@ -100,10 +100,15 @@ final class NotificationService: NSObject, UNUserNotificationCenterDelegate {
         didReceive response: UNNotificationResponse,
         withCompletionHandler completionHandler: @escaping () -> Void
     ) {
+        let messageID = response.notification.request.identifier
         let userInfo = response.notification.request.content.userInfo
-        if let click = userInfo["click"] as? String, let url = URL(string: click) {
-            Task { @MainActor in NSWorkspace.shared.open(url) }
+        let clickURL = (userInfo["click"] as? String).flatMap(URL.init(string:))
+        Task { @MainActor in
+            Store.shared.markRead(id: messageID)
+            if let clickURL {
+                NSWorkspace.shared.open(clickURL)
+            }
+            completionHandler()
         }
-        completionHandler()
     }
 }
