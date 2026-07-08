@@ -1,3 +1,5 @@
+[![App Store](https://img.shields.io/badge/App%20Store-Download-blue?logo=apple)](https://apps.apple.com/app/6779552361)
+
 # ntfyme
 
 A native macOS menu bar client for [ntfy](https://ntfy.sh) — subscribe to topics, get system notifications, and keep a searchable history of everything that came in. No Electron, no helper binaries, just a small SwiftUI agent that lives in your menu bar.
@@ -141,4 +143,4 @@ Issues and PRs welcome. Larger changes — please open an issue first so we can 
 
 ## License
 
-MIT. See [LICENSE](LICENSE) (add one if you want to publish).
+MIT. See [LICENSE](LICENSE)

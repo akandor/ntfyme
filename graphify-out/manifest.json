@@ -1,0 +1,107 @@
+{
+  "/Volumes/FData/Development/ntfyme/ntfyme/AppIcon.icon/icon.json": {
+    "mtime": 1781255893.655888,
+    "ast_hash": "4d7b45ab40422c1f95941ca243c300b3",
+    "semantic_hash": "4d7b45ab40422c1f95941ca243c300b3"
+  },
+  "/Volumes/FData/Development/ntfyme/ntfyme/Assets.xcassets/AccentColor.colorset/Contents.json": {
+    "mtime": 1781255406.6169345,
+    "ast_hash": "2721451a81ec4dce4d72b4c913980655",
+    "semantic_hash": "2721451a81ec4dce4d72b4c913980655"
+  },
+  "/Volumes/FData/Development/ntfyme/ntfyme/Assets.xcassets/Contents.json": {
+    "mtime": 1781270275.2558,
+    "ast_hash": "9deb2ada1cc834bbebf8bbad9c8978a1",
+    "semantic_hash": "9deb2ada1cc834bbebf8bbad9c8978a1"
+  },
+  "/Volumes/FData/Development/ntfyme/ntfyme/Assets.xcassets/bell.imageset/Contents.json": {
+    "mtime": 1781254322.957879,
+    "ast_hash": "6604fbbcd3182454e1806e940fd4010d",
+    "semantic_hash": "6604fbbcd3182454e1806e940fd4010d"
+  },
+  "/Volumes/FData/Development/ntfyme/ntfyme/Assets.xcassets/ntfyme.imageset/Contents.json": {
+    "mtime": 1781257334.858225,
+    "ast_hash": "0fcc62acd7d93322656c1a898ad8a6fd",
+    "semantic_hash": "0fcc62acd7d93322656c1a898ad8a6fd"
+  },
+  "/Volumes/FData/Development/ntfyme/ntfyme/AttachmentView.swift": {
+    "mtime": 1781268616.3257296,
+    "ast_hash": "1ffba36c45344828f3a575711c7de928",
+    "semantic_hash": "1ffba36c45344828f3a575711c7de928"
+  },
+  "/Volumes/FData/Development/ntfyme/ntfyme/ContentView.swift": {
+    "mtime": 1781590731.702063,
+    "ast_hash": "5534d05d5c98a64569a92e9a3ee053f9",
+    "semantic_hash": "5534d05d5c98a64569a92e9a3ee053f9"
+  },
+  "/Volumes/FData/Development/ntfyme/ntfyme/Emoji.swift": {
+    "mtime": 1781259627.718948,
+    "ast_hash": "16d5e1c833a167e28aa207cf17860418",
+    "semantic_hash": "16d5e1c833a167e28aa207cf17860418"
+  },
+  "/Volumes/FData/Development/ntfyme/ntfyme/HistoryView.swift": {
+    "mtime": 1781328293.763211,
+    "ast_hash": "7b01412689af2a5f0f6667aeed9a3514",
+    "semantic_hash": "7b01412689af2a5f0f6667aeed9a3514"
+  },
+  "/Volumes/FData/Development/ntfyme/ntfyme/Models.swift": {
+    "mtime": 1781268420.4345903,
+    "ast_hash": "76660341c8b604180c2c925fbc1fa4ff",
+    "semantic_hash": "76660341c8b604180c2c925fbc1fa4ff"
+  },
+  "/Volumes/FData/Development/ntfyme/ntfyme/NotificationService.swift": {
+    "mtime": 1781335992.4795551,
+    "ast_hash": "a0a53a0c99306f82ef712deab31fb2d9",
+    "semantic_hash": "a0a53a0c99306f82ef712deab31fb2d9"
+  },
+  "/Volumes/FData/Development/ntfyme/ntfyme/SettingsView.swift": {
+    "mtime": 1781591968.9637995,
+    "ast_hash": "645c106826f9b5d21b750a25570e5c76",
+    "semantic_hash": "645c106826f9b5d21b750a25570e5c76"
+  },
+  "/Volumes/FData/Development/ntfyme/ntfyme/Store.swift": {
+    "mtime": 1781516484.0931056,
+    "ast_hash": "9028608f24a2043ca9c66fde9f325cbf",
+    "semantic_hash": "9028608f24a2043ca9c66fde9f325cbf"
+  },
+  "/Volumes/FData/Development/ntfyme/ntfyme/Theme.swift": {
+    "mtime": 1781268216.5431485,
+    "ast_hash": "5006bf832cea406fb2d42884f01515a9",
+    "semantic_hash": "5006bf832cea406fb2d42884f01515a9"
+  },
+  "/Volumes/FData/Development/ntfyme/ntfyme/ntfymeApp.swift": {
+    "mtime": 1783002662.8272958,
+    "ast_hash": "e3a52278aad84a2d03ab9427b2bc770f",
+    "semantic_hash": "e3a52278aad84a2d03ab9427b2bc770f"
+  },
+  "/Volumes/FData/Development/ntfyme/APPSTORE.md": {
+    "mtime": 1781333909.002826,
+    "ast_hash": "0c6e12a20a67aa2fc3f57991a20ac687",
+    "semantic_hash": "0c6e12a20a67aa2fc3f57991a20ac687"
+  },
+  "/Volumes/FData/Development/ntfyme/CLAUDE.md": {
+    "mtime": 1783357601.97937,
+    "ast_hash": "82efb97a359f5c7290bf2513d14686be",
+    "semantic_hash": "82efb97a359f5c7290bf2513d14686be"
+  },
+  "/Volumes/FData/Development/ntfyme/README.md": {
+    "mtime": 1781592506.1941895,
+    "ast_hash": "545a4f7d970f3bd72fab7be340aed914",
+    "semantic_hash": "545a4f7d970f3bd72fab7be340aed914"
+  },
+  "/Volumes/FData/Development/ntfyme/ntfyme/AppIcon.icon/Assets/terminal.svg": {
+    "mtime": 1781255893.655907,
+    "ast_hash": "ba70a2ec14b0e52cfc686c33edbd8e37",
+    "semantic_hash": "ba70a2ec14b0e52cfc686c33edbd8e37"
+  },
+  "/Volumes/FData/Development/ntfyme/ntfyme/Assets.xcassets/bell.imageset/bell.svg": {
+    "mtime": 1781254322.958031,
+    "ast_hash": "42301941783b502e73d07615ef2810e8",
+    "semantic_hash": "42301941783b502e73d07615ef2810e8"
+  },
+  "/Volumes/FData/Development/ntfyme/ntfyme/Assets.xcassets/ntfyme.imageset/ntfyme.svg": {
+    "mtime": 1781257334.85812,
+    "ast_hash": "2e6185398a1b71d8498db161fc553624",
+    "semantic_hash": "2e6185398a1b71d8498db161fc553624"
+  }
+}
