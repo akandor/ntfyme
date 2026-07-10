@@ -195,7 +195,11 @@ final class Store: ObservableObject {
     }
 
     func markRead(_ message: NtfyMessage) {
-        guard let i = messages.firstIndex(where: { $0.id == message.id }) else { return }
+        markRead(id: message.id)
+    }
+
+    func markRead(id: String) {
+        guard let i = messages.firstIndex(where: { $0.id == id }) else { return }
         if !messages[i].read {
             messages[i].read = true
         }
